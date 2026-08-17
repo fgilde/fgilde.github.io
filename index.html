@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/11070717?v=4">
 <meta property="og:url" content="https://fgilde.github.io/">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b0f1a'/%3E%3Ctext x='32' y='44' font-family='system-ui,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='%237c5cff'%3EFG%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="assets/gilde-icon.png">
 <link rel="preconnect" href="https://api.github.com">
 <style>
 :root{
@@ -107,6 +107,7 @@ h1{font-size:clamp(2.6rem,7vw,5.2rem);line-height:.98;letter-spacing:-.045em;mar
 .btn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:14px;font-weight:640;
   font-size:14.5px;border:1px solid var(--border);background:var(--surface);transition:.22s;cursor:pointer}
 .btn:hover{transform:translateY(-2px);border-color:var(--border-2);background:var(--surface-2)}
+.gicon{border-radius:4px;display:block}
 .btn.primary{border:0;color:#fff;background:linear-gradient(135deg,var(--violet),#4f46e5 55%,var(--cyan));
   box-shadow:0 16px 34px -14px var(--violet)}
 .btn.primary:hover{box-shadow:0 22px 44px -14px var(--violet)}
@@ -167,6 +168,8 @@ select.sort{padding:10px 12px;border-radius:14px;border:1px solid var(--border);
 .thumb .mark{position:absolute;inset:0;display:grid;place-items:center;font-size:56px;font-weight:850;
   letter-spacing:-.05em;color:rgba(255,255,255,.14);transition:opacity .4s}
 html[data-theme=light] .thumb .mark{color:rgba(10,14,26,.13)}
+.thumb .shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;
+  transform:scale(1.001)}
 .thumb iframe{position:absolute;top:0;left:0;width:333.34%;height:333.34%;transform:scale(.3);
   transform-origin:0 0;border:0;pointer-events:none;opacity:0;transition:opacity .6s}
 .thumb.loaded iframe{opacity:1}
@@ -258,15 +261,16 @@ footer{margin-top:110px;padding:44px 0 60px;border-top:1px solid var(--border);c
   <div class="hero">
     <div class="avatar"><img src="https://avatars.githubusercontent.com/u/11070717?v=4" alt="Florian Gilde" width="300" height="300" loading="lazy"></div>
     <span class="pill"><span class="dot"></span> <span id="live-pill">Live Demos &amp; Open Source</span></span>
-    <h1>Florian Gilde<br><span class="gradtext">baut Dinge fürs Web.</span></h1>
-    <p class="lead">Husband · Father · Developer · Diver · Skateboarder. Ich schreibe vor allem
-      <span class="rotator"><span>.NET &amp; Blazor</span><span>TypeScript &amp; React</span><span>Aspire &amp; Cloud</span><span>Audio &amp; Video Tools</span></span><br>
-      Hier liegt alles, was eine Live-Seite hat — Demos, Docs und Playgrounds, direkt aus meinen GitHub-Repos.</p>
+    <h1>Florian Gilde<br><span class="gradtext">baut Dinge, die laufen.</span></h1>
+    <p class="lead">Husband · Father · Developer · Diver · Skateboarder. Web, Desktop, Mobile, Cloud —
+      am Ende läuft es <span class="rotator"><span>im Browser</span><span>auf dem Desktop</span><span>auf dem Phone</span><span>in der Cloud</span></span><br>
+      Blazor-Libraries, WPF-Audio-Editoren, 3D-Games, Video-Tools, CLIs. Hier liegt alles, was eine Live-Seite hat.</p>
     <div class="cta">
       <a class="btn primary" href="#demos">Live Demos ansehen
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
              stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn" href="https://www.gilde.org" target="_blank" rel="noopener">gilde.org</a>
+      <a class="btn" href="https://www.gilde.org" target="_blank" rel="noopener">
+        <img class="gicon" src="assets/gilde-icon.png" alt="" width="18" height="18">gilde.org</a>
       <a class="btn" href="https://florian.gilde.org" target="_blank" rel="noopener">florian.gilde.org · CV</a>
       <a class="btn" href="https://github.com/fgilde" target="_blank" rel="noopener">@fgilde</a>
     </div>
@@ -317,7 +321,8 @@ footer{margin-top:110px;padding:44px 0 60px;border-top:1px solid var(--border);c
   </section>
 
   <footer>
-    <strong>Florian Gilde</strong> · aka Mandaflorian — gebaut mit einer einzigen HTML-Datei, ohne Build-Step.
+    <strong>Florian Gilde</strong> · aka Mandaflorian — eine HTML-Datei, kein Build-Step.
+    <span id="generated"></span>
     <div class="flinks">
       <a href="https://www.gilde.org" target="_blank" rel="noopener">gilde.org</a>
       <a href="https://florian.gilde.org" target="_blank" rel="noopener">florian.gilde.org</a>
@@ -340,38 +345,11 @@ footer{margin-top:110px;padding:44px 0 60px;border-top:1px solid var(--border);c
 const USER = 'fgilde';
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* Seed: gerendert sofort, auch wenn die GitHub-API bockt oder rate-limited ist.
-   Wird von der Live-API überschrieben, sobald sie antwortet. */
-const SEED = [
- {name:'MudBlazor.Extensions',stargazers_count:328,language:'C#',has_pages:true,homepage:'https://www.mudex.org',
-  description:'Extension package for MudBlazor — dialogs, components, services. mudex.org'},
- {name:'AI-Ming',stargazers_count:21,language:'C#',has_pages:true,homepage:'https://poweraim.de',
-  description:'AI-Ming — poweraim.de'},
- {name:'Nextended',stargazers_count:13,language:'C#',has_pages:true,homepage:'',
-  description:'Utility library, nExt moved from CodePlex to GitHub'},
- {name:'UNLowCoder',stargazers_count:9,language:'C#',has_pages:true,homepage:'',description:'Low-code tooling'},
- {name:'CheckoutAndBuild',stargazers_count:7,language:'C#',has_pages:true,homepage:'',
-  description:'Visual Studio Team Explorer extension: local CI, one-click clean/checkout/build/test'},
- {name:'AspireUI',stargazers_count:3,language:'TypeScript',has_pages:true,homepage:'',description:'UI for .NET Aspire'},
- {name:'videola',stargazers_count:3,language:'TypeScript',has_pages:true,homepage:'https://videola.app',
-  description:'Webbasierter Video-Editor: Multi-Track, Effekte, Keyframes, Audio-Studio, Templates, MCP/API'},
- {name:'Audiola',stargazers_count:3,language:'C#',has_pages:true,homepage:'https://audiola.de',
-  description:'WPF Audio Editor'},
- {name:'MuseForge',stargazers_count:3,language:'Python',has_pages:true,homepage:'',description:'Music generation forge'},
- {name:'blobbyVolley',stargazers_count:3,language:'TypeScript',has_pages:true,homepage:'',
-  description:'Blobby-Volley-Clone in 3D (Three.js) — CPU-Gegner & WebRTC-Multiplayer'},
- {name:'PowerClean',stargazers_count:3,language:'C#',has_pages:true,homepage:'https://fgilde.github.io/PowerClean/',
-  description:'PowerClean'},
- {name:'DrunkenRecords',stargazers_count:3,language:'HTML',has_pages:true,homepage:'',description:'DrunkenRecords'},
-];
-
 const LANG_COLORS = {'C#':'#953dac','TypeScript':'#3178c6','JavaScript':'#f1e05a','Python':'#3572a5',
   'HTML':'#e34c26','CSS':'#563d7c','SCSS':'#c6538c','Blazor':'#512bd4','Shell':'#89e051','Vue':'#41b883'};
 
 const el = s => document.querySelector(s);
-const liveUrl = r => (r.homepage && /^https?:\/\//.test(r.homepage))
-  ? r.homepage : `https://${USER}.github.io/${r.name}/`;
-const isCustom = r => !!(r.homepage && /^https?:\/\//.test(r.homepage) && !r.homepage.includes('github.io'));
+const isCustom = r => !r.url.includes('github.io');
 const initials = n => n.replace(/[^a-zA-Z]/g,' ').trim().split(/\s+|(?=[A-Z])/)
   .filter(Boolean).slice(0,2).map(s=>s[0]).join('').toUpperCase() || n.slice(0,2).toUpperCase();
 
@@ -379,25 +357,29 @@ let ALL = [], state = {q:'', lang:'', sort:'stars'};
 
 /* ---------- render ---------- */
 function cardHtml(r){
-  const url = liveUrl(r), color = LANG_COLORS[r.language] || '#66718f';
-  return `<article class="card" data-url="${url}">
-    <div class="thumb" data-src="${url}">
-      <div class="mark">${initials(r.name)}</div>
-      <div class="hint">👀 Hover für Live-Preview</div><div class="spinner"></div>
+  const color = LANG_COLORS[r.language] || '#66718f';
+  const shot = r.shot
+    ? `<img class="shot" src="shots/${encodeURIComponent(r.shot)}" alt="Vorschau von ${r.name}"
+            loading="lazy" decoding="async" onerror="this.remove()">` : '';
+  return `<article class="card">
+    <div class="thumb" data-src="${r.url}">
+      <div class="mark">${initials(r.name)}</div>${shot}
+      <div class="hint">${r.shot?'🔍 Hover für Live-Ansicht':'👀 Hover für Live-Preview'}</div>
+      <div class="spinner"></div>
     </div>
     <div class="body">
       <div class="row">
         <h3>${r.name}</h3>
-        <span class="tag ${isCustom(r)?'dom':'gh'}">${isCustom(r)?new URL(url).hostname.replace('www.',''):'github.io'}</span>
+        <span class="tag ${isCustom(r)?'dom':'gh'}">${isCustom(r)?new URL(r.url).hostname.replace('www.',''):'github.io'}</span>
       </div>
       <p class="desc">${r.description || 'Keine Beschreibung.'}</p>
       <div class="meta">
         ${r.language?`<span><i class="lang-dot" style="background:${color}"></i>${r.language}</span>`:''}
-        <span>★ ${r.stargazers_count}</span>
-        ${r.pushed_at?`<span>⟳ ${new Date(r.pushed_at).toLocaleDateString('de-DE',{month:'short',year:'numeric'})}</span>`:''}
+        <span>★ ${r.stars}</span>
+        ${r.pushed?`<span>⟳ ${new Date(r.pushed).toLocaleDateString('de-DE',{month:'short',year:'numeric'})}</span>`:''}
       </div>
       <div class="acts">
-        <a class="go" href="${url}" target="_blank" rel="noopener">Live öffnen ↗</a>
+        <a class="go" href="${r.url}" target="_blank" rel="noopener">Live öffnen ↗</a>
         <a href="https://github.com/${USER}/${r.name}" target="_blank" rel="noopener">Code</a>
       </div>
     </div>
@@ -412,7 +394,7 @@ function itemHtml(r){
       <span class="t">${r.name}</span>
       <span class="d">${r.description || (r.language||'Repo')}</span>
     </span>
-    <span class="s">★ ${r.stargazers_count}</span>
+    <span class="s">★ ${r.stars}</span>
   </a>`;
 }
 
@@ -422,14 +404,14 @@ function match(r){
   return (!q || hay.includes(q)) && (!state.lang || r.language === state.lang);
 }
 const sorters = {
-  stars:(a,b)=>b.stargazers_count-a.stargazers_count,
-  pushed:(a,b)=>new Date(b.pushed_at||0)-new Date(a.pushed_at||0),
+  stars:(a,b)=>b.stars-a.stars,
+  pushed:(a,b)=>new Date(b.pushed||0)-new Date(a.pushed||0),
   name:(a,b)=>a.name.localeCompare(b.name),
 };
 
 function render(){
   const shown = ALL.filter(match).sort(sorters[state.sort]);
-  const demos = shown.filter(r=>r.has_pages), rest = shown.filter(r=>!r.has_pages);
+  const demos = shown.filter(r=>r.hasPages), rest = shown.filter(r=>!r.hasPages);
 
   el('#cards').innerHTML = demos.length ? demos.map(cardHtml).join('')
     : `<div class="empty" style="grid-column:1/-1">Nichts gefunden. Suche anpassen.</div>`;
@@ -456,7 +438,14 @@ function buildChips(){
 function wirePreviews(){
   document.querySelectorAll('.thumb:not([data-wired])').forEach(t=>{
     t.dataset.wired = '1';
-    if (REDUCED) { t.querySelector('.hint').remove(); return; }
+    const hint = t.querySelector('.hint');
+    t.addEventListener('click', ()=> window.open(t.dataset.src,'_blank','noopener'));
+    t.style.cursor = 'pointer';
+    if (REDUCED) { hint.remove(); return; }
+    if (t.dataset.src.startsWith('http://')) { // an http page is blocked in an https iframe
+      hint.textContent = '↗ Seite öffnen (kein HTTPS)';
+      return;
+    }
     let timer;
     const load = () => {
       if (t.dataset.done) return;
@@ -474,8 +463,6 @@ function wirePreviews(){
     };
     t.addEventListener('pointerenter', ()=>{ timer = setTimeout(load, 320); });
     t.addEventListener('pointerleave', ()=> clearTimeout(timer));
-    t.addEventListener('click', ()=> window.open(t.dataset.src,'_blank','noopener'));
-    t.style.cursor = 'pointer';
   });
 }
 
@@ -512,26 +499,64 @@ function countTo(node, target){
   requestAnimationFrame(step);
 }
 
-/* ---------- data ---------- */
+/* ---------- data ----------
+   shots/manifest.json is the primary source: it is built nightly by .github/workflows/screenshots.yml,
+   which can read each repo's Pages CNAME (the anonymous API cannot) and screenshots every live page.
+   Same-origin and static, so it always loads and costs no rate limit. The live API call afterwards
+   only refreshes stars/descriptions and picks up repos created since the last workflow run. */
+let USER_INFO = null;
+
 function apply(repos, user){
-  ALL = repos.filter(r=>!r.fork && !r.archived && r.name !== `${USER}.github.io`);
+  ALL = repos;
+  if (user) USER_INFO = user;
   buildChips(); render();
-  countTo(el('#s-demos'), ALL.filter(r=>r.has_pages).length);
-  countTo(el('#s-repos'), user?.public_repos ?? ALL.length);
-  countTo(el('#s-stars'), ALL.reduce((s,r)=>s+r.stargazers_count,0));
-  countTo(el('#s-follow'), user?.followers ?? 0);
+  countTo(el('#s-demos'), ALL.filter(r=>r.hasPages).length);
+  countTo(el('#s-repos'), USER_INFO?.publicRepos ?? ALL.length);
+  countTo(el('#s-stars'), ALL.reduce((s,r)=>s+r.stars,0));
+  countTo(el('#s-follow'), USER_INFO?.followers ?? 0);
 }
 
-apply(SEED);
-Promise.all([
-  fetch(`https://api.github.com/users/${USER}/repos?per_page=100&sort=pushed`).then(r=>r.ok?r.json():Promise.reject(r.status)),
-  fetch(`https://api.github.com/users/${USER}`).then(r=>r.ok?r.json():null).catch(()=>null),
-]).then(([repos,user])=>{
-  if (Array.isArray(repos) && repos.length) apply(repos, user);
-}).catch(err=>{
-  console.warn('GitHub API nicht erreichbar, Seed-Daten bleiben aktiv:', err);
-  el('#live-pill').textContent = 'Live Demos & Open Source · Offline-Snapshot';
+/* GitHub API shape -> our shape. No Pages CNAME here, so keep whatever the manifest knew. */
+const fromApi = (r, known) => ({
+  name: r.name,
+  description: r.description || '',
+  language: r.language || '',
+  stars: r.stargazers_count,
+  pushed: r.pushed_at,
+  hasPages: r.has_pages,
+  url: known?.url || (/^https?:\/\//.test(r.homepage||'') ? r.homepage : `https://${USER}.github.io/${r.name}/`),
+  shot: known?.shot || null,
 });
+
+(async () => {
+  const m = await fetch('shots/manifest.json', {cache:'no-cache'})
+    .then(r => r.ok ? r.json() : null).catch(() => null);
+
+  if (m) {
+    apply(m.repos, m.user);
+    el('#generated').textContent = 'Vorschaubilder vom '
+      + new Date(m.generated).toLocaleDateString('de-DE',{day:'2-digit',month:'long',year:'numeric'});
+  }
+
+  const [repos, user] = await Promise.all([
+    fetch(`https://api.github.com/users/${USER}/repos?per_page=100&sort=pushed`)
+      .then(r => r.ok ? r.json() : null).catch(() => null),
+    fetch(`https://api.github.com/users/${USER}`).then(r => r.ok ? r.json() : null).catch(() => null),
+  ]);
+
+  if (Array.isArray(repos) && repos.length) {
+    const known = new Map((m?.repos || []).map(r => [r.name, r]));
+    apply(
+      repos.filter(r => !r.fork && !r.archived && r.name !== `${USER}.github.io`)
+           .map(r => fromApi(r, known.get(r.name))),
+      user && {login:user.login, publicRepos:user.public_repos, followers:user.followers});
+  } else if (!m) {
+    el('#cards').innerHTML = `<div class="empty" style="grid-column:1/-1">
+      Daten konnten nicht geladen werden. <a href="https://github.com/${USER}?tab=repositories"
+      style="color:var(--cyan)">Direkt auf GitHub ansehen ↗</a></div>`;
+    el('#live-pill').textContent = 'Live Demos & Open Source · offline';
+  }
+})();
 
 /* ---------- chrome ---------- */
 el('#q').addEventListener('input', e=>{ state.q = e.target.value; render(); });

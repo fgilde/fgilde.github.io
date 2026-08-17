@@ -1,0 +1,11 @@
+{
+  "name": "fgilde-github-io",
+  "private": true,
+  "description": "Live showcase of every fgilde repo with a GitHub Pages site",
+  "scripts": {
+    "shots": "node scripts/shots.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.49.0"
+  }
+}

@@ -1,0 +1,394 @@
+{
+ "generated": "2026-08-17T19:14:17.294Z",
+ "user": {
+  "login": "fgilde",
+  "publicRepos": 52,
+  "followers": 30
+ },
+ "repos": [
+  {
+   "name": "CheckoutAndBuild",
+   "description": "Productdescription  Create your own local Complete Build Process.  CheckoutAndBuild is a powerfull VisualStudio TeamExplorer Extension that allows you to manage, clean, checkout or build your solutions easy. With CheckoutAndBuild you can create a fast and powerfull CI run local on your machine, to ensure everything before checkin. Create your One-Click behavoir to clean, checkout, build run tests or many more",
+   "language": "C#",
+   "stars": 7,
+   "pushed": "2026-08-17T18:50:37Z",
+   "hasPages": true,
+   "url": "https://fgilde.github.io/CheckoutAndBuild/",
+   "shot": "CheckoutAndBuild.jpg"
+  },
+  {
+   "name": "fgilde",
+   "description": "",
+   "language": "",
+   "stars": 5,
+   "pushed": "2026-08-17T18:47:36Z",
+   "hasPages": false
+  },
+  {
+   "name": "AspireUI",
+   "description": "",
+   "language": "TypeScript",
+   "stars": 3,
+   "pushed": "2026-08-17T13:09:05Z",
+   "hasPages": true,
+   "url": "https://fgilde.github.io/AspireUI/",
+   "shot": "AspireUI.jpg"
+  },
+  {
+   "name": "CoworkeeNextJs",
+   "description": "",
+   "language": "TypeScript",
+   "stars": 3,
+   "pushed": "2026-08-17T13:07:40Z",
+   "hasPages": false
+  },
+  {
+   "name": "MudBlazor.Extensions",
+   "description": "MudBlazor.Extensions from https://www.mudex.org is a small extension for MudBlazor from https://mudblazor.com",
+   "language": "C#",
+   "stars": 328,
+   "pushed": "2026-08-17T10:23:20Z",
+   "hasPages": true,
+   "url": "https://www.mudex.org",
+   "shot": "MudBlazor.Extensions.jpg"
+  },
+  {
+   "name": "ResourceTranslator.CLI",
+   "description": "This tool can translate your resource files with Microsoft Cognitive Service for translations",
+   "language": "C#",
+   "stars": 7,
+   "pushed": "2026-08-17T10:19:24Z",
+   "hasPages": false
+  },
+  {
+   "name": "Playzor",
+   "description": "A Blazor playground you can host, embed or build on - the packages behind playzor.net",
+   "language": "C#",
+   "stars": 7,
+   "pushed": "2026-08-17T10:14:27Z",
+   "hasPages": false
+  },
+  {
+   "name": "hausverwaltung",
+   "description": "",
+   "language": "TypeScript",
+   "stars": 3,
+   "pushed": "2026-08-16T09:03:18Z",
+   "hasPages": false
+  },
+  {
+   "name": "videola",
+   "description": "Vollstaendiger webbasierter Video-Editor: Multi-Track, Effekte, Keyframes, Audio-Studio, Templates, MCP/API. Web, Desktop, Mobile, Docker.",
+   "language": "TypeScript",
+   "stars": 3,
+   "pushed": "2026-08-14T10:38:20Z",
+   "hasPages": true,
+   "url": "https://videola.app/",
+   "shot": "videola.jpg"
+  },
+  {
+   "name": "Audiola",
+   "description": "WPF Audio editor",
+   "language": "C#",
+   "stars": 3,
+   "pushed": "2026-08-14T09:27:27Z",
+   "hasPages": true,
+   "url": "https://audiola.de/",
+   "shot": "Audiola.jpg"
+  },
+  {
+   "name": "AI-Ming",
+   "description": "",
+   "language": "C#",
+   "stars": 21,
+   "pushed": "2026-08-14T08:45:45Z",
+   "hasPages": true,
+   "url": "http://poweraim.de/",
+   "shot": "AI-Ming.jpg"
+  },
+  {
+   "name": "MuseForge",
+   "description": "",
+   "language": "Python",
+   "stars": 3,
+   "pushed": "2026-08-10T22:45:11Z",
+   "hasPages": true,
+   "url": "https://fgilde.github.io/MuseForge/",
+   "shot": "MuseForge.jpg"
+  },
+  {
+   "name": "PveWelcome",
+   "description": "",
+   "language": "C#",
+   "stars": 3,
+   "pushed": "2026-08-02T19:06:30Z",
+   "hasPages": false
+  },
+  {
+   "name": "Nextended",
+   "description": "Moved package nExt from CodePlex to github and updated to .net5",
+   "language": "C#",
+   "stars": 13,
+   "pushed": "2026-07-30T22:21:41Z",
+   "hasPages": true,
+   "url": "https://fgilde.github.io/Nextended/",
+   "shot": "Nextended.jpg"
+  },
+  {
+   "name": "aspire.love",
+   "description": "Create a local and azure hostable environment for your lovable projects or other supabase client projects",
+   "language": "C#",
+   "stars": 7,
+   "pushed": "2026-07-24T11:33:29Z",
+   "hasPages": false
+  },
+  {
+   "name": "AuralizeBlazor",
+   "description": "AuralizeBlazor is a wrapper component for audioMotion-analyzer.",
+   "language": "C#",
+   "stars": 27,
+   "pushed": "2026-07-23T23:09:50Z",
+   "hasPages": false
+  },
+  {
+   "name": "blobbyVolley",
+   "description": "Moderner Blobby-Volley-Clone in 3D (Three.js) — CPU-Gegner & WebRTC-Online-Multiplayer",
+   "language": "TypeScript",
+   "stars": 3,
+   "pushed": "2026-07-16T15:04:20Z",
+   "hasPages": true,
+   "url": "https://fgilde.github.io/blobbyVolley/",
+   "shot": "blobbyVolley.jpg"
+  },
+  {
+   "name": "PowerClean",
+   "description": "",
+   "language": "C#",
+   "stars": 3,
+   "pushed": "2026-07-16T14:41:09Z",
+   "hasPages": true,
+   "url": "https://fgilde.github.io/PowerClean/",
+   "shot": "PowerClean.jpg"
+  },
+  {
+   "name": "DrunkenRecords",
+   "description": "",
+   "language": "HTML",
+   "stars": 3,
+   "pushed": "2026-07-01T13:23:02Z",
+   "hasPages": true,
+   "url": "https://fgilde.github.io/DrunkenRecords/",
+   "shot": "DrunkenRecords.jpg"
+  },
+  {
+   "name": "LocalAIHub",
+   "description": "",
+   "language": "Python",
+   "stars": 3,
+   "pushed": "2026-05-20T18:19:37Z",
+   "hasPages": false
+  },
+  {
+   "name": "MudExRichTextEditor",
+   "description": "Quill based RichEditor component for MudBlazor",
+   "language": "C#",
+   "stars": 133,
+   "pushed": "2026-04-30T09:40:15Z",
+   "hasPages": false
+  },
+  {
+   "name": "UNLowCoder",
+   "description": "",
+   "language": "C#",
+   "stars": 9,
+   "pushed": "2026-01-15T13:34:51Z",
+   "hasPages": true,
+   "url": "https://fgilde.github.io/UNLowCoder/",
+   "shot": "UNLowCoder.jpg"
+  },
+  {
+   "name": "BlazorParameterCastingMagic",
+   "description": "The BlazorParameterCastingMagic package provides a way to handle dynamic casting of parameters in Blazor components because Blazor does not natively support implicit conversions for parameters ",
+   "language": "C#",
+   "stars": 6,
+   "pushed": "2025-12-12T14:47:02Z",
+   "hasPages": false
+  },
+  {
+   "name": "AbpMudExTheme",
+   "description": "",
+   "language": "HTML",
+   "stars": 7,
+   "pushed": "2025-07-15T11:19:55Z",
+   "hasPages": false
+  },
+  {
+   "name": "BlazorJS",
+   "description": "BlazorJS is a small package to use a Scripts Component on every page or component to load JavaScript files when not loaded, and unload automatically.",
+   "language": "JavaScript",
+   "stars": 13,
+   "pushed": "2025-01-07T08:49:26Z",
+   "hasPages": false
+  },
+  {
+   "name": "GptInvoke",
+   "description": "",
+   "language": "C#",
+   "stars": 8,
+   "pushed": "2024-12-12T12:04:40Z",
+   "hasPages": false
+  },
+  {
+   "name": "ScreenCaptureBot",
+   "description": "This Project was created by the Idea to create a FPS Playing Game bot based on Image Detection. But I never finished it. However its also a nice sample for Screencapturing and Live Object Detection",
+   "language": "C#",
+   "stars": 6,
+   "pushed": "2024-06-19T12:41:16Z",
+   "hasPages": false
+  },
+  {
+   "name": "MakeGenericAgain",
+   "description": "Problem is that nswag client code generation from open api specification or swagger generates classes without generics. This tool can be used afterwards to make classes generic again",
+   "language": "C#",
+   "stars": 11,
+   "pushed": "2024-06-07T05:57:39Z",
+   "hasPages": false
+  },
+  {
+   "name": "ngx-property-grid",
+   "description": "",
+   "language": "TypeScript",
+   "stars": 5,
+   "pushed": "2023-12-07T13:22:32Z",
+   "hasPages": false
+  },
+  {
+   "name": "ngx-template",
+   "description": "",
+   "language": "HTML",
+   "stars": 5,
+   "pushed": "2023-12-07T12:55:11Z",
+   "hasPages": false
+  },
+  {
+   "name": "SABIO.ClientApi",
+   "description": "An api client for SABIO aka Serviceware Knowledge from https://www.getsabio.com/de/",
+   "language": "CSS",
+   "stars": 6,
+   "pushed": "2023-10-24T14:34:26Z",
+   "hasPages": false
+  },
+  {
+   "name": "embed-fonts",
+   "description": "",
+   "language": "JavaScript",
+   "stars": 5,
+   "pushed": "2023-09-11T10:29:32Z",
+   "hasPages": false
+  },
+  {
+   "name": "dockwipe",
+   "description": "",
+   "language": "JavaScript",
+   "stars": 5,
+   "pushed": "2023-06-29T07:56:52Z",
+   "hasPages": false
+  },
+  {
+   "name": "teleprompter",
+   "description": "",
+   "language": "JavaScript",
+   "stars": 4,
+   "pushed": "2023-04-21T08:12:36Z",
+   "hasPages": false
+  },
+  {
+   "name": "remote-dependencies",
+   "description": "Simple tool to have mapping for remote files to download them locally",
+   "language": "JavaScript",
+   "stars": 6,
+   "pushed": "2023-02-08T10:01:01Z",
+   "hasPages": false
+  },
+  {
+   "name": "NetCoreCleanArchitectureSolutionTemplate",
+   "description": "This is a Visual Studio Template to create a new .netcore 3 solution with clean architecture pattern. ",
+   "language": "C#",
+   "stars": 4,
+   "pushed": "2022-12-08T06:19:46Z",
+   "hasPages": false
+  },
+  {
+   "name": "ConfigHandling",
+   "description": "This Project provides easy handling for your appsettings",
+   "language": "",
+   "stars": 4,
+   "pushed": "2022-02-16T12:41:05Z",
+   "hasPages": false
+  },
+  {
+   "name": "CodeBlueComponentTests",
+   "description": "CodeBlueComponentLibraryTests",
+   "language": "SCSS",
+   "stars": 4,
+   "pushed": "2021-11-10T13:54:21Z",
+   "hasPages": false
+  },
+  {
+   "name": "CleanArchitectureBase",
+   "description": "Base Structure for Clean Architecture Project",
+   "language": "C#",
+   "stars": 5,
+   "pushed": "2021-09-17T14:25:17Z",
+   "hasPages": false
+  },
+  {
+   "name": "PongGame",
+   "description": "",
+   "language": "C#",
+   "stars": 5,
+   "pushed": "2021-07-22T14:23:16Z",
+   "hasPages": false
+  },
+  {
+   "name": "CompleXStudio",
+   "description": "",
+   "language": "HTML",
+   "stars": 5,
+   "pushed": "2021-07-22T11:28:42Z",
+   "hasPages": false
+  },
+  {
+   "name": "ChocoMaker",
+   "description": "",
+   "language": "C#",
+   "stars": 5,
+   "pushed": "2021-07-22T11:10:25Z",
+   "hasPages": false
+  },
+  {
+   "name": "BeamerStreamer",
+   "description": "This is a project to create amazing effects on your wall behind your tv",
+   "language": "C#",
+   "stars": 8,
+   "pushed": "2021-06-30T13:39:56Z",
+   "hasPages": false
+  },
+  {
+   "name": "lastverteilung",
+   "description": "",
+   "language": "C#",
+   "stars": 5,
+   "pushed": "2018-07-08T13:20:42Z",
+   "hasPages": false
+  },
+  {
+   "name": "ccd",
+   "description": "",
+   "language": "C#",
+   "stars": 5,
+   "pushed": "2017-04-25T15:03:04Z",
+   "hasPages": false
+  }
+ ]
+}

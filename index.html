@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Florian Gilde · Live Demos &amp; Projects</title>
-<meta name="description" content="Alle Live-Demos, Docs und Open-Source-Projekte von Florian Gilde (fgilde) an einem Ort.">
+<title>Florian Gilde · Live Demos, Packages &amp; Projects</title>
+<meta name="description" content="Live demos, NuGet and npm packages and open source projects by Florian Gilde (fgilde).">
 <meta name="color-scheme" content="dark light">
-<meta property="og:title" content="Florian Gilde · Live Demos &amp; Projects">
-<meta property="og:description" content="Alle Live-Demos, Docs und Open-Source-Projekte von fgilde an einem Ort.">
+<meta property="og:title" content="Florian Gilde · Live Demos &amp; Packages">
+<meta property="og:description" content="Every live page, package and repo by fgilde in one place.">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/11070717?v=4">
 <meta property="og:url" content="https://fgilde.github.io/">
 <meta name="twitter:card" content="summary_large_image">
@@ -19,7 +19,7 @@
   --surface-2:rgba(255,255,255,.07); --border:rgba(255,255,255,.09);
   --border-2:rgba(255,255,255,.16);
   --text:#e9edf7; --muted:#94a0bd; --dim:#66718f;
-  --violet:#7c5cff; --cyan:#22d3ee; --pink:#f472b6; --lime:#a3e635;
+  --violet:#7c5cff; --cyan:#22d3ee; --pink:#f472b6; --lime:#a3e635; --gold:#dda94a;
   --shadow:0 24px 60px -20px rgba(0,0,0,.85);
   --radius:20px; --maxw:1240px;
 }
@@ -40,11 +40,10 @@ body{
 a{color:inherit;text-decoration:none}
 button,input,select{font:inherit;color:inherit}
 
-/* ---------- background: aurora + grid + noise ---------- */
-.bg{position:fixed;inset:0;z-index:-2;overflow:hidden;background:
-  radial-gradient(120% 80% at 50% -10%,var(--bg-2),var(--bg) 60%)}
-.blob{position:absolute;width:52vw;height:52vw;border-radius:50%;filter:blur(90px);opacity:.5;
-  will-change:transform}
+/* ---------- background ---------- */
+.bg{position:fixed;inset:0;z-index:-2;overflow:hidden;
+  background:radial-gradient(120% 80% at 50% -10%,var(--bg-2),var(--bg) 60%)}
+.blob{position:absolute;width:52vw;height:52vw;border-radius:50%;filter:blur(90px);opacity:.5;will-change:transform}
 .b1{background:radial-gradient(circle,#7c5cff,transparent 65%);top:-16vw;left:-8vw;animation:drift1 26s ease-in-out infinite}
 .b2{background:radial-gradient(circle,#22d3ee,transparent 65%);top:6vw;right:-14vw;animation:drift2 32s ease-in-out infinite}
 .b3{background:radial-gradient(circle,#f472b6,transparent 65%);bottom:-24vw;left:22vw;animation:drift3 38s ease-in-out infinite}
@@ -69,18 +68,43 @@ body.has-pointer .spot{opacity:1}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 header.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
   background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid transparent;
-  transition:border-color .3s,background .3s}
+  transition:border-color .3s}
 header.top.stuck{border-bottom-color:var(--border)}
-.topbar{display:flex;align-items:center;gap:18px;height:64px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:750;letter-spacing:-.02em}
-.mono{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:13px;font-weight:800;
-  color:#fff;background:linear-gradient(135deg,var(--violet),var(--cyan));box-shadow:0 6px 18px -6px var(--violet)}
+.topbar{display:flex;align-items:center;gap:16px;height:70px}
+
+/* brand */
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.brandmark{position:relative;width:40px;height:40px;display:grid;place-items:center;flex:0 0 auto}
+.brandmark .ring{position:absolute;inset:0;border-radius:13px;
+  background:conic-gradient(from 0deg,var(--violet),var(--cyan),var(--gold),var(--pink),var(--violet));
+  animation:spin 8s linear infinite;box-shadow:0 6px 20px -8px var(--violet)}
+.brandmark::after{content:"";position:absolute;inset:1.7px;border-radius:11.4px;
+  background:linear-gradient(160deg,var(--bg-2),var(--bg))}
+.brandmark img{position:relative;z-index:1;width:22px;height:22px;
+  transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.brand:hover .brandmark img{transform:scale(1.14) rotate(-6deg)}
+.btext{display:flex;flex-direction:column;gap:3px;line-height:1}
+.btext b{font-size:16.5px;font-weight:800;letter-spacing:-.035em}
+.btext b i{font-style:normal;color:var(--muted);font-weight:600}
+.btext b em{font-style:normal;
+  background:linear-gradient(96deg,var(--violet),var(--cyan) 45%,var(--pink));
+  background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:slide 8s linear infinite}
+.btext small{font-size:9px;letter-spacing:.19em;text-transform:uppercase;color:var(--dim);font-weight:700}
+
 .topnav{display:flex;gap:4px;margin-left:auto;align-items:center}
 .tlink{padding:8px 12px;border-radius:10px;color:var(--muted);font-size:14px;font-weight:550;transition:.2s}
 .tlink:hover{color:var(--text);background:var(--surface)}
+@media(max-width:860px){.tlink{display:none}.btext small{display:none}}
 .iconbtn{width:36px;height:36px;border-radius:11px;border:1px solid var(--border);background:var(--surface);
-  display:grid;place-items:center;cursor:pointer;transition:.2s}
+  display:grid;place-items:center;cursor:pointer;transition:.2s;flex:0 0 auto}
 .iconbtn:hover{border-color:var(--border-2);transform:translateY(-1px)}
+.seg{display:flex;border:1px solid var(--border);border-radius:11px;overflow:hidden;background:var(--surface);
+  flex:0 0 auto}
+.seg button{padding:8px 10px;font-size:11.5px;font-weight:800;letter-spacing:.07em;color:var(--muted);
+  background:transparent;border:0;cursor:pointer;transition:.2s}
+.seg button:hover{color:var(--text)}
+.seg button[aria-pressed=true]{color:#fff;background:linear-gradient(135deg,var(--violet),var(--cyan))}
 
 /* ---------- hero ---------- */
 .hero{padding:76px 0 40px;position:relative}
@@ -94,41 +118,44 @@ h1{font-size:clamp(2.6rem,7vw,5.2rem);line-height:.98;letter-spacing:-.045em;mar
   background-size:280% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
   animation:slide 9s linear infinite}
 @keyframes slide{to{background-position:280% 0}}
+@keyframes spin{to{transform:rotate(1turn)}}
 .lead{margin:20px 0 0;max-width:62ch;font-size:clamp(1rem,2.2vw,1.2rem);color:var(--muted)}
 .rotator{display:inline-grid;vertical-align:bottom;overflow:hidden;height:1.5em}
 .rotator span{grid-area:1/1;color:var(--text);font-weight:650;opacity:0;animation:roll 12s infinite}
 .rotator span:nth-child(2){animation-delay:3s}
 .rotator span:nth-child(3){animation-delay:6s}
 .rotator span:nth-child(4){animation-delay:9s}
-@keyframes roll{0%,25%{opacity:0;transform:translateY(100%)}
-  4%,21%{opacity:1;transform:translateY(0)}
-  25.01%,100%{opacity:0;transform:translateY(-100%)}}
+@keyframes roll{0%{opacity:0;transform:translateY(100%)}
+  2%,23%{opacity:1;transform:translateY(0)}
+  25%,100%{opacity:0;transform:translateY(-100%)}}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:14px;font-weight:640;
   font-size:14.5px;border:1px solid var(--border);background:var(--surface);transition:.22s;cursor:pointer}
 .btn:hover{transform:translateY(-2px);border-color:var(--border-2);background:var(--surface-2)}
-.gicon{border-radius:4px;display:block}
 .btn.primary{border:0;color:#fff;background:linear-gradient(135deg,var(--violet),#4f46e5 55%,var(--cyan));
   box-shadow:0 16px 34px -14px var(--violet)}
-.btn.primary:hover{box-shadow:0 22px 44px -14px var(--violet)}
+.gicon{border-radius:4px;display:block}
+.btn.sponsor{color:#ff8ac4;border-color:rgba(234,74,170,.35);background:rgba(234,74,170,.10)}
+.btn.sponsor:hover{color:#ffa8d3;border-color:rgba(234,74,170,.6);background:rgba(234,74,170,.18)}
+.btn.sponsor svg{animation:beat 1.9s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.22)}28%{transform:scale(1)}42%{transform:scale(1.16)}}
 .avatar{position:absolute;right:0;top:64px;width:min(300px,26vw);aspect-ratio:1;border-radius:50%;
   padding:4px;background:conic-gradient(from 0deg,var(--violet),var(--cyan),var(--pink),var(--violet));
   animation:spin 14s linear infinite;display:none}
 @media(min-width:1080px){.avatar{display:block}}
-@keyframes spin{to{transform:rotate(1turn)}}
 .avatar img{width:100%;height:100%;border-radius:50%;display:block;background:var(--bg-2);
   animation:spin 14s linear infinite reverse}
 
 /* ---------- stats ---------- */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:56px 0 0}
-.stat{padding:20px;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:56px 0 0}
+.stat{padding:18px 20px;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);
   backdrop-filter:blur(8px)}
-.stat b{display:block;font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;letter-spacing:-.03em;
+.stat b{display:block;font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.03em;
   font-variant-numeric:tabular-nums}
-.stat small{color:var(--dim);font-size:12.5px;text-transform:uppercase;letter-spacing:.09em;font-weight:600}
+.stat small{color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.09em;font-weight:600}
 
 /* ---------- sections ---------- */
-section{padding:86px 0 0;scroll-margin-top:78px}
+section{padding:86px 0 0;scroll-margin-top:84px}
 .shead{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:26px}
 .shead h2{margin:0;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.035em;font-weight:780}
 .shead p{margin:6px 0 0;color:var(--muted);font-size:15px}
@@ -150,7 +177,7 @@ section{padding:86px 0 0;scroll-margin-top:78px}
 .chip[aria-pressed=true]{color:#fff;border-color:transparent;background:linear-gradient(135deg,var(--violet),var(--cyan))}
 select.sort{padding:10px 12px;border-radius:14px;border:1px solid var(--border);background:var(--surface);outline:0;cursor:pointer}
 
-/* ---------- cards ---------- */
+/* ---------- demo cards ---------- */
 .grid-cards{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
 .card{position:relative;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);
   backdrop-filter:blur(10px);overflow:hidden;display:flex;flex-direction:column;
@@ -168,8 +195,8 @@ select.sort{padding:10px 12px;border-radius:14px;border:1px solid var(--border);
 .thumb .mark{position:absolute;inset:0;display:grid;place-items:center;font-size:56px;font-weight:850;
   letter-spacing:-.05em;color:rgba(255,255,255,.14);transition:opacity .4s}
 html[data-theme=light] .thumb .mark{color:rgba(10,14,26,.13)}
-/* one tall screenshot per page: the card crops the top, hover pans down to the bottom, so
-   every page gets a real scrolling preview even when it cannot be framed in an iframe */
+/* one tall screenshot per page: the card crops the top, hover pans to the bottom, so pages
+   that cannot be framed still get a scrolling preview */
 .thumb .shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   object-position:center top;transition:object-position 7s linear}
 .card:hover .thumb .shot{object-position:center bottom}
@@ -179,7 +206,7 @@ html[data-theme=light] .thumb .mark{color:rgba(10,14,26,.13)}
 .thumb.loaded .mark{opacity:0}
 .hint{position:absolute;bottom:10px;left:10px;padding:5px 10px;border-radius:999px;font-size:11px;
   font-weight:650;background:rgba(5,7,13,.62);color:#e9edf7;border:1px solid rgba(255,255,255,.14);
-  backdrop-filter:blur(6px);display:flex;gap:6px;align-items:center;opacity:1;transition:opacity .3s}
+  backdrop-filter:blur(6px);display:flex;gap:6px;align-items:center;transition:opacity .3s}
 .thumb.loaded .hint,.thumb.loading .hint{opacity:0}
 .spinner{position:absolute;bottom:12px;right:12px;width:16px;height:16px;border-radius:50%;
   border:2px solid rgba(255,255,255,.22);border-top-color:var(--cyan);animation:spin .8s linear infinite;
@@ -198,13 +225,48 @@ html[data-theme=light] .thumb .mark{color:rgba(10,14,26,.13)}
   text-transform:uppercase;border:1px solid var(--border)}
 .tag.dom{color:var(--lime);border-color:rgba(163,230,53,.32);background:rgba(163,230,53,.09)}
 .tag.gh{color:var(--cyan);border-color:rgba(34,211,238,.3);background:rgba(34,211,238,.09)}
+.tag.fork{color:var(--dim)}
+.tag.live{color:var(--lime);border-color:rgba(163,230,53,.32);background:rgba(163,230,53,.09)}
 .acts{display:flex;gap:8px;margin-top:12px}
 .acts a{flex:1;text-align:center;padding:9px 12px;border-radius:11px;font-size:13px;font-weight:650;
   border:1px solid var(--border);transition:.2s}
 .acts a:hover{border-color:var(--border-2);background:var(--surface-2);transform:translateY(-1px)}
 .acts a.go{border:0;color:#fff;background:linear-gradient(135deg,var(--violet),var(--cyan))}
 
-/* stat cards for repos without their own page */
+/* ---------- package cards ---------- */
+.pkgs{display:grid;gap:15px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.pkg{position:relative;display:flex;gap:14px;padding:17px 18px;border-radius:18px;overflow:hidden;
+  border:1px solid var(--border);background:var(--surface);backdrop-filter:blur(8px);transition:.25s;
+  animation:rise .45s cubic-bezier(.2,.7,.2,1) both}
+.pkg:hover{border-color:var(--border-2);transform:translateY(-3px);background:var(--surface-2);
+  box-shadow:var(--shadow)}
+.pkg::after{content:"";position:absolute;left:0;top:0;width:3px;height:100%;opacity:0;transition:opacity .25s}
+.pkg:hover::after{opacity:1}
+.pkg.nuget::after{background:linear-gradient(var(--violet),#004880)}
+.pkg.npm::after{background:linear-gradient(#fb7185,#cb3837)}
+.pkg .ico{width:44px;height:44px;border-radius:12px;flex:0 0 auto;display:grid;place-items:center;
+  background:var(--surface-2);border:1px solid var(--border);overflow:hidden;font-weight:850;font-size:15px;
+  color:var(--muted);letter-spacing:-.04em}
+.pkg .ico img{width:100%;height:100%;object-fit:contain;padding:5px}
+.pkg .info{min-width:0;display:flex;flex-direction:column;gap:6px;flex:1}
+.pkg .ptop{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pkg .pname{font-weight:730;font-size:14.6px;letter-spacing:-.02em;overflow:hidden;text-overflow:ellipsis;
+  white-space:nowrap;max-width:100%}
+.pkg .pdesc{color:var(--muted);font-size:12.8px;display:-webkit-box;-webkit-line-clamp:2;
+  -webkit-box-orient:vertical;overflow:hidden}
+.pkg .pfoot{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:auto;padding-top:4px;
+  font-size:12.3px;color:var(--dim);font-weight:650}
+.pkg .dl{font-variant-numeric:tabular-nums;color:var(--text);font-weight:800;font-size:14px}
+.pkg .plinks{margin-left:auto;display:flex;gap:8px}
+.pkg .plinks a{color:var(--muted);font-weight:700;font-size:12px;padding:4px 9px;border-radius:8px;
+  border:1px solid var(--border);transition:.2s}
+.pkg .plinks a:hover{color:var(--text);border-color:var(--border-2);background:var(--surface)}
+.ver{font-size:11px;font-weight:750;color:var(--dim);font-variant-numeric:tabular-nums}
+.reg{font-size:9.5px;padding:3px 7px;border-radius:5px;font-weight:850;letter-spacing:.07em;text-transform:uppercase}
+.reg.nuget{color:#b8a6ff;border:1px solid rgba(124,92,255,.35);background:rgba(124,92,255,.12)}
+.reg.npm{color:#fb99a4;border:1px solid rgba(203,56,55,.42);background:rgba(203,56,55,.15)}
+
+/* ---------- repo stat cards ---------- */
 .list{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
 .item{position:relative;display:flex;flex-direction:column;gap:9px;padding:18px 19px;border-radius:18px;
   border:1px solid var(--border);background:var(--surface);backdrop-filter:blur(8px);transition:.25s;
@@ -224,8 +286,6 @@ html[data-theme=light] .thumb .mark{color:rgba(10,14,26,.13)}
 .topics{display:flex;gap:6px;flex-wrap:wrap}
 .topic{font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid var(--border);
   color:var(--dim);font-weight:650;white-space:nowrap}
-.tag.fork{color:var(--dim);border-color:var(--border);background:transparent}
-.tag.live{color:var(--lime);border-color:rgba(163,230,53,.32);background:rgba(163,230,53,.09)}
 
 .empty{padding:52px;text-align:center;color:var(--dim);border:1px dashed var(--border);border-radius:var(--radius)}
 .skel{height:330px;border-radius:var(--radius);border:1px solid var(--border);
@@ -242,9 +302,9 @@ footer{margin-top:110px;padding:44px 0 60px;border-top:1px solid var(--border);c
 
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.08s!important}
-  .card,.item{opacity:1!important;translate:none!important;animation:none!important}
+  .card,.item,.pkg{opacity:1!important;translate:none!important;animation:none!important}
   .rotator{height:auto}
-  .rotator span{position:static;animation:none!important}
+  .rotator span{animation:none!important}
   .rotator span:first-child{opacity:1}
   .rotator span:not(:first-child){display:none}
   html{scroll-behavior:auto}
@@ -258,14 +318,24 @@ footer{margin-top:110px;padding:44px 0 60px;border-top:1px solid var(--border);c
 
 <header class="top" id="top">
   <div class="wrap topbar">
-    <a class="brand" href="#"><span class="mono">FG</span> fgilde</a>
+    <a class="brand" href="#" aria-label="Florian Gilde">
+      <span class="brandmark"><i class="ring"></i><img src="assets/gilde-icon.png" alt="" width="22" height="22"></span>
+      <span class="btext">
+        <b><i>florian</i><em>gilde</em></b>
+        <small data-i18n="brandsub">Web · Desktop · Mobile</small>
+      </span>
+    </a>
     <nav class="topnav">
-      <a class="tlink" href="#demos">Live Demos</a>
-      <a class="tlink" href="#projects">Projekte</a>
+      <a class="tlink" href="#demos" data-i18n="navDemos">Live Demos</a>
+      <a class="tlink" href="#packages" data-i18n="navPackages">Pakete</a>
+      <a class="tlink" href="#projects" data-i18n="navProjects">Projekte</a>
       <a class="tlink" href="https://github.com/fgilde" target="_blank" rel="noopener">GitHub</a>
-      <button class="iconbtn" id="theme" title="Theme wechseln" aria-label="Theme wechseln">
+      <div class="seg" id="lang" role="group" aria-label="Sprache">
+        <button data-lang="de" aria-pressed="true">DE</button><button data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="iconbtn" id="theme" title="Theme" aria-label="Theme">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-             stroke-linecap="round"><path class="ico-moon" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+             stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
     </nav>
   </div>
@@ -274,33 +344,39 @@ footer{margin-top:110px;padding:44px 0 60px;border-top:1px solid var(--border);c
 <main class="wrap">
   <div class="hero">
     <div class="avatar"><img src="https://avatars.githubusercontent.com/u/11070717?v=4" alt="Florian Gilde" width="300" height="300" loading="lazy"></div>
-    <span class="pill"><span class="dot"></span> <span id="live-pill">Live Demos &amp; Open Source</span></span>
-    <h1>Florian Gilde<br><span class="gradtext">baut Dinge, die laufen.</span></h1>
-    <p class="lead">Husband · Father · Developer · Diver · Skateboarder. Web, Desktop, Mobile, Cloud —
-      am Ende läuft es <span class="rotator"><span>im Browser</span><span>auf dem Desktop</span><span>auf dem Phone</span><span>in der Cloud</span></span><br>
-      Blazor-Libraries, WPF-Audio-Editoren, 3D-Games, Video-Tools, CLIs. Hier liegt alles, was eine Live-Seite hat.</p>
+    <span class="pill"><span class="dot"></span> <span id="live-pill" data-i18n="pill">Live Demos, Pakete &amp; Open Source</span></span>
+    <h1><span data-i18n="h1a">Florian Gilde</span><br><span class="gradtext" data-i18n="h1b">baut Dinge, die laufen.</span></h1>
+    <p class="lead"><span data-i18n="leadA">Husband · Father · Developer · Diver · Skateboarder. Web, Desktop, Mobile, Cloud — am Ende läuft es</span>
+      <span class="rotator"><span data-i18n="rot1">im Browser</span><span data-i18n="rot2">auf dem Desktop</span><span data-i18n="rot3">auf dem Phone</span><span data-i18n="rot4">in der Cloud</span></span><br>
+      <span data-i18n="leadB">Blazor-Libraries, WPF-Audio-Editoren, 3D-Games, Video-Tools, CLIs.</span></p>
     <div class="cta">
-      <a class="btn primary" href="#demos">Live Demos ansehen
+      <a class="btn primary" href="#demos"><span data-i18n="ctaDemos">Live Demos ansehen</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
              stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn" href="https://www.gilde.org" target="_blank" rel="noopener">
         <img class="gicon" src="assets/gilde-icon.png" alt="" width="18" height="18">gilde.org</a>
-      <a class="btn" href="https://florian.gilde.org" target="_blank" rel="noopener">florian.gilde.org · CV</a>
+      <a class="btn" href="https://florian.gilde.org" target="_blank" rel="noopener">florian.gilde.org · <span data-i18n="cv">CV</span></a>
       <a class="btn" href="https://github.com/fgilde" target="_blank" rel="noopener">@fgilde</a>
+      <a class="btn sponsor" href="https://github.com/sponsors/fgilde" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path
+          d="M12 21s-7.5-4.6-9.3-9A5.3 5.3 0 0 1 12 6.6 5.3 5.3 0 0 1 21.3 12c-1.8 4.4-9.3 9-9.3 9z"/></svg>
+        <span data-i18n="sponsor">Sponsor</span></a>
     </div>
-    <div class="stats" id="stats">
-      <div class="stat"><b data-c id="s-demos">–</b><small>Live Pages</small></div>
-      <div class="stat"><b data-c id="s-repos">–</b><small>Public Repos</small></div>
-      <div class="stat"><b data-c id="s-stars">–</b><small>GitHub Stars</small></div>
-      <div class="stat"><b data-c id="s-follow">–</b><small>Followers</small></div>
+    <div class="stats">
+      <div class="stat"><b id="s-demos">–</b><small data-i18n="stLive">Live Pages</small></div>
+      <div class="stat"><b id="s-packages">–</b><small data-i18n="stPkg">Pakete</small></div>
+      <div class="stat"><b id="s-downloads">–</b><small data-i18n="stDl">Downloads</small></div>
+      <div class="stat"><b id="s-repos">–</b><small data-i18n="stRepos">Public Repos</small></div>
+      <div class="stat"><b id="s-stars">–</b><small data-i18n="stStars">GitHub Stars</small></div>
+      <div class="stat"><b id="s-follow">–</b><small data-i18n="stFollow">Followers</small></div>
     </div>
   </div>
 
   <section id="demos">
     <div class="shead">
       <div>
-        <h2>🚀 Live Demos &amp; Docs</h2>
-        <p>Jedes Repo mit GitHub Pages oder eigener Domain. Hover über eine Karte lädt die echte Seite als Preview.</p>
+        <h2>🚀 <span data-i18n="secDemos">Live Demos &amp; Docs</span></h2>
+        <p data-i18n="secDemosSub">Jedes Repo mit GitHub Pages oder eigener Domain. Hover zeigt die echte Seite.</p>
       </div>
       <span class="count" id="c-demos"></span>
     </div>
@@ -308,26 +384,36 @@ footer{margin-top:110px;padding:44px 0 60px;border-top:1px solid var(--border);c
       <label class="search">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
              stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Projekte durchsuchen …" autocomplete="off" aria-label="Suche">
+        <input id="q" type="search" autocomplete="off" aria-label="Suche">
         <kbd>/</kbd>
       </label>
       <div class="chips" id="chips"></div>
       <select class="sort" id="sort" aria-label="Sortierung">
-        <option value="stars">★ Stars</option>
-        <option value="pushed">Zuletzt aktiv</option>
-        <option value="name">A–Z</option>
+        <option value="stars" data-i18n="sortStars">★ Stars</option>
+        <option value="pushed" data-i18n="sortPushed">Zuletzt aktiv</option>
+        <option value="name" data-i18n="sortName">A–Z</option>
       </select>
     </div>
-    <div class="grid-cards" id="cards">
-      <div class="skel"></div><div class="skel"></div><div class="skel"></div>
+    <div class="grid-cards" id="cards"><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>
+  </section>
+
+  <section id="packages">
+    <div class="shead">
+      <div>
+        <h2>📦 <span data-i18n="secPkg">NuGet &amp; npm Pakete</span></h2>
+        <p data-i18n="secPkgSub">Veröffentlichte Pakete, sortiert nach Downloads.</p>
+      </div>
+      <span class="count" id="c-packages"></span>
     </div>
+    <div class="toolbar"><div class="chips" id="pchips"></div></div>
+    <div class="pkgs" id="pkglist"></div>
   </section>
 
   <section id="projects">
     <div class="shead">
       <div>
-        <h2>📦 Libraries, Tools &amp; Experimente</h2>
-        <p>Alle übrigen Repos — Pakete, CLIs, Spielwiesen und Forks.</p>
+        <h2>🧰 <span data-i18n="secRepos">Libraries, Tools &amp; Experimente</span></h2>
+        <p data-i18n="secReposSub">Alle öffentlichen Repos — Pakete, CLIs, Spielwiesen und Forks.</p>
       </div>
       <span class="count" id="c-projects"></span>
     </div>
@@ -335,7 +421,7 @@ footer{margin-top:110px;padding:44px 0 60px;border-top:1px solid var(--border);c
   </section>
 
   <footer>
-    <strong>Florian Gilde</strong> · aka Mandaflorian — eine HTML-Datei, kein Build-Step.
+    <strong>Florian Gilde</strong> · <span data-i18n="footNote">eine HTML-Datei, kein Build-Step.</span>
     <span id="generated"></span>
     <div class="flinks">
       <a href="https://www.gilde.org" target="_blank" rel="noopener">gilde.org</a>
@@ -345,12 +431,13 @@ footer{margin-top:110px;padding:44px 0 60px;border-top:1px solid var(--border);c
       <a href="https://www.npmjs.com/~fgilde" target="_blank" rel="noopener">npm</a>
       <a href="https://www.youtube.com/channel/UCXT5-iCTs2GZVINjJsVZjQw" target="_blank" rel="noopener">YouTube</a>
       <a href="https://www.linkedin.com/in/florian-gilde/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/fgilde/fgilde.github.io" target="_blank" rel="noopener">Quellcode dieser Seite</a>
+      <a href="https://github.com/sponsors/fgilde" target="_blank" rel="noopener" data-i18n="sponsor">Sponsor</a>
+      <a href="https://github.com/fgilde/fgilde.github.io" target="_blank" rel="noopener" data-i18n="source">Quellcode dieser Seite</a>
     </div>
   </footer>
 </main>
 
-<button class="iconbtn up" id="up" title="Nach oben" aria-label="Nach oben">
+<button class="iconbtn up" id="up" title="Top" aria-label="Top">
   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
        stroke-linecap="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
 </button>
@@ -359,68 +446,156 @@ footer{margin-top:110px;padding:44px 0 60px;border-top:1px solid var(--border);c
 const USER = 'fgilde';
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const I18N = {
+  de: {
+    brandsub:'Web · Desktop · Mobile', navDemos:'Live Demos', navPackages:'Pakete', navProjects:'Projekte',
+    pill:'Live Demos, Pakete & Open Source', h1a:'Florian Gilde', h1b:'baut Dinge, die laufen.',
+    leadA:'Husband · Father · Developer · Diver · Skateboarder. Web, Desktop, Mobile, Cloud — am Ende läuft es',
+    rot1:'im Browser', rot2:'auf dem Desktop', rot3:'auf dem Phone', rot4:'in der Cloud',
+    leadB:'Blazor-Libraries, WPF-Audio-Editoren, 3D-Games, Video-Tools, CLIs.',
+    ctaDemos:'Live Demos ansehen', cv:'CV',
+    stLive:'Live Pages', stPkg:'Pakete', stDl:'Downloads', stRepos:'Public Repos', stStars:'GitHub Stars',
+    stFollow:'Followers',
+    secDemos:'Live Demos & Docs',
+    secDemosSub:'Jedes Repo mit GitHub Pages oder eigener Domain. Hover zeigt die echte Seite.',
+    secPkg:'NuGet & npm Pakete', secPkgSub:'Veröffentlichte Pakete, sortiert nach Downloads.',
+    secRepos:'Libraries, Tools & Experimente',
+    secReposSub:'Alle öffentlichen Repos — Pakete, CLIs, Spielwiesen und Forks.',
+    searchPh:'Projekte durchsuchen …', all:'Alle',
+    sortStars:'★ Stars', sortPushed:'Zuletzt aktiv', sortName:'A–Z',
+    nLive:'{n} Seiten live', nPkg:'{n} Pakete · {d} Downloads', nRepos:'{n} Repos',
+    noDesc:'Keine Beschreibung.', repoFallback:'Repo', openLive:'Live öffnen ↗', code:'Code',
+    hintFrame:'🔍 Hover für Live-Ansicht', hintOpen:'↗ Seite öffnen',
+    starsT:'Stars', forksT:'Forks', issuesT:'Offene Issues', pushT:'Letzter Push', dlT:'Downloads gesamt',
+    dlYear:'Downloads (12 Monate)',
+    sponsor:'Sponsor werden', footNote:'eine HTML-Datei, kein Build-Step.', source:'Quellcode dieser Seite',
+    generated:'Vorschaubilder vom {d}', offline:'Live Demos & Open Source · offline',
+    emptyFilter:'Nichts gefunden. Suche anpassen.',
+    failed:'Daten konnten nicht geladen werden.', onGithub:'Direkt auf GitHub ansehen ↗',
+  },
+  en: {
+    brandsub:'Web · Desktop · Mobile', navDemos:'Live demos', navPackages:'Packages', navProjects:'Projects',
+    pill:'Live demos, packages & open source', h1a:'Florian Gilde', h1b:'builds things that run.',
+    leadA:'Husband · father · developer · diver · skateboarder. Web, desktop, mobile, cloud — in the end it runs',
+    rot1:'in the browser', rot2:'on the desktop', rot3:'on your phone', rot4:'in the cloud',
+    leadB:'Blazor libraries, WPF audio editors, 3D games, video tools, CLIs.',
+    ctaDemos:'See the live demos', cv:'CV',
+    stLive:'live pages', stPkg:'packages', stDl:'downloads', stRepos:'public repos', stStars:'GitHub stars',
+    stFollow:'followers',
+    secDemos:'Live demos & docs',
+    secDemosSub:'Every repo with a GitHub Pages site or custom domain. Hover shows the real page.',
+    secPkg:'NuGet & npm packages', secPkgSub:'Published packages, sorted by downloads.',
+    secRepos:'Libraries, tools & experiments',
+    secReposSub:'Every public repo — packages, CLIs, playgrounds and forks.',
+    searchPh:'Search projects …', all:'All',
+    sortStars:'★ stars', sortPushed:'Recently active', sortName:'A–Z',
+    nLive:'{n} pages live', nPkg:'{n} packages · {d} downloads', nRepos:'{n} repos',
+    noDesc:'No description.', repoFallback:'repo', openLive:'Open live ↗', code:'Code',
+    hintFrame:'🔍 Hover for a live view', hintOpen:'↗ Open page',
+    starsT:'Stars', forksT:'Forks', issuesT:'Open issues', pushT:'Last push', dlT:'Total downloads',
+    dlYear:'Downloads (12 months)',
+    sponsor:'Sponsor me', footNote:'one HTML file, no build step.', source:'Source of this page',
+    generated:'Previews from {d}', offline:'Live demos & open source · offline',
+    emptyFilter:'Nothing found. Try another search.',
+    failed:'Could not load the data.', onGithub:'Browse on GitHub ↗',
+  },
+};
+
+let LANG = localStorage.fgLang
+  || ((navigator.language || '').toLowerCase().startsWith('de') ? 'de' : 'en');
+const t = (k, v = {}) => (I18N[LANG][k] ?? k).replace(/\{(\w+)\}/g, (_, n) => v[n] ?? '');
+const locale = () => LANG === 'de' ? 'de-DE' : 'en-US';
+const num = n => new Intl.NumberFormat(locale()).format(n);
+const compact = n => new Intl.NumberFormat(locale(), {notation:'compact', maximumFractionDigits:1}).format(n);
+
 const LANG_COLORS = {'C#':'#953dac','TypeScript':'#3178c6','JavaScript':'#f1e05a','Python':'#3572a5',
   'HTML':'#e34c26','CSS':'#563d7c','SCSS':'#c6538c','Blazor':'#512bd4','Shell':'#89e051','Vue':'#41b883'};
 
 const el = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const isCustom = r => !r.url.includes('github.io');
 const initials = n => n.replace(/[^a-zA-Z]/g,' ').trim().split(/\s+|(?=[A-Z])/)
   .filter(Boolean).slice(0,2).map(s=>s[0]).join('').toUpperCase() || n.slice(0,2).toUpperCase();
 
-let ALL = [], state = {q:'', lang:'', sort:'stars'};
+let ALL = [], PKGS = [], USER_INFO = null, GENERATED = null;
+let state = {q:'', lang:'', sort:'stars', registry:''};
 
-/* ---------- render ---------- */
+/* ---------- markup ---------- */
 function cardHtml(r){
   const color = LANG_COLORS[r.language] || '#66718f';
-  const shot = r.shot
-    ? `<img class="shot" src="shots/${encodeURIComponent(r.shot)}" alt="Vorschau von ${r.name}"
-            loading="lazy" decoding="async" onerror="this.remove()">` : '';
+  const shot = r.shot ? `<img class="shot" src="shots/${encodeURIComponent(r.shot)}"
+      alt="${esc(r.name)}" loading="lazy" decoding="async" onerror="this.remove()">` : '';
   return `<article class="card">
-    <div class="thumb" data-src="${r.url}" ${r.framable?'data-framable="1"':''}>
+    <div class="thumb" data-src="${esc(r.url)}" ${r.framable?'data-framable="1"':''}>
       <div class="mark">${initials(r.name)}</div>${shot}
-      <div class="hint">${r.framable?'🔍 Hover für Live-Ansicht':'↗ Seite öffnen'}</div>
+      <div class="hint">${r.framable?t('hintFrame'):t('hintOpen')}</div>
       <div class="spinner"></div>
     </div>
     <div class="body">
       <div class="row">
-        <h3>${r.name}</h3>
-        <span class="tag ${isCustom(r)?'dom':'gh'}">${isCustom(r)?new URL(r.url).hostname.replace('www.',''):'github.io'}</span>
+        <h3>${esc(r.name)}</h3>
+        <span class="tag ${isCustom(r)?'dom':'gh'}">${isCustom(r)?esc(new URL(r.url).hostname.replace('www.','')):'github.io'}</span>
       </div>
-      <p class="desc">${r.description || 'Keine Beschreibung.'}</p>
+      <p class="desc">${esc(r.description) || t('noDesc')}</p>
       <div class="meta">
-        ${r.language?`<span><i class="lang-dot" style="background:${color}"></i>${r.language}</span>`:''}
-        <span>★ ${r.stars}</span>
-        ${r.pushed?`<span>⟳ ${new Date(r.pushed).toLocaleDateString('de-DE',{month:'short',year:'numeric'})}</span>`:''}
+        ${r.language?`<span><i class="lang-dot" style="background:${color}"></i>${esc(r.language)}</span>`:''}
+        <span title="${t('starsT')}">★ ${num(r.stars)}</span>
+        ${r.pushed?`<span title="${t('pushT')}">⟳ ${new Date(r.pushed).toLocaleDateString(locale(),{month:'short',year:'numeric'})}</span>`:''}
       </div>
       <div class="acts">
-        <a class="go" href="${r.url}" target="_blank" rel="noopener">Live öffnen ↗</a>
-        <a href="https://github.com/${USER}/${r.name}" target="_blank" rel="noopener">Code</a>
+        <a class="go" href="${esc(r.url)}" target="_blank" rel="noopener">${t('openLive')}</a>
+        <a href="https://github.com/${USER}/${encodeURIComponent(r.name)}" target="_blank" rel="noopener">${t('code')}</a>
       </div>
     </div>
   </article>`;
 }
 
+function pkgHtml(p){
+  const icon = p.icon
+    ? `<img src="${esc(p.icon)}" alt="" loading="lazy" onerror="this.replaceWith(document.createTextNode('${esc(initials(p.name.replace(/^@[^/]+\//,'')))}'))">`
+    : initials(p.name.replace(/^@[^/]+\//,''));
+  return `<article class="pkg ${p.registry}">
+    <span class="ico">${icon}</span>
+    <span class="info">
+      <span class="ptop">
+        <span class="reg ${p.registry}">${p.registry}</span>
+        <span class="pname" title="${esc(p.name)}">${esc(p.name)}</span>
+        <span class="ver">v${esc(p.version)}</span>
+      </span>
+      <span class="pdesc">${esc(p.description) || t('noDesc')}</span>
+      <span class="pfoot">
+        <span class="dl" title="${p.registry==='npm'?t('dlYear'):t('dlT')}">↓ ${compact(p.downloads)}</span>
+        <span class="plinks">
+          ${p.repo?`<a href="${esc(p.repo)}" target="_blank" rel="noopener">${t('code')}</a>`:''}
+          <a href="${esc(p.url)}" target="_blank" rel="noopener">${p.registry==='npm'?'npm ↗':'NuGet ↗'}</a>
+        </span>
+      </span>
+    </span>
+  </article>`;
+}
+
 function itemHtml(r){
   const color = LANG_COLORS[r.language] || '#66718f';
-  const date = r.pushed ? new Date(r.pushed).toLocaleDateString('de-DE',{month:'short',year:'numeric'}) : '';
-  return `<a class="item" href="https://github.com/${USER}/${r.name}" target="_blank" rel="noopener">
+  const date = r.pushed ? new Date(r.pushed).toLocaleDateString(locale(),{month:'short',year:'numeric'}) : '';
+  return `<a class="item" href="https://github.com/${USER}/${encodeURIComponent(r.name)}" target="_blank" rel="noopener">
     <span class="t">
       ${r.language?`<i class="lang-dot" style="background:${color};flex:0 0 auto"></i>`:''}
-      <span style="min-width:0;overflow:hidden;text-overflow:ellipsis">${r.name}</span>
+      <span style="min-width:0;overflow:hidden;text-overflow:ellipsis">${esc(r.name)}</span>
       ${r.isFork?'<span class="tag fork">Fork</span>':''}
-      ${r.homepage?'<span class="tag live">Site</span>':''}
+      ${(r.hasPages||r.homepage)?'<span class="tag live">Site</span>':''}
     </span>
-    <span class="d">${r.description || (r.language ? r.language + ' Repo' : 'Repo')}</span>
-    ${r.topics?.length?`<span class="topics">${r.topics.map(t=>`<span class="topic">${t}</span>`).join('')}</span>`:''}
+    <span class="d">${esc(r.description) || (r.language ? esc(r.language)+' '+t('repoFallback') : t('repoFallback'))}</span>
+    ${r.topics?.length?`<span class="topics">${r.topics.map(x=>`<span class="topic">${esc(x)}</span>`).join('')}</span>`:''}
     <span class="nums">
-      <span title="Stars">★ <b>${r.stars}</b></span>
-      <span title="Forks">⑂ <b>${r.forks ?? 0}</b></span>
-      ${r.issues?`<span title="Offene Issues">◦ <b>${r.issues}</b></span>`:''}
-      ${date?`<span title="Letzter Push">⟳ ${date}</span>`:''}
+      <span title="${t('starsT')}">★ <b>${num(r.stars)}</b></span>
+      <span title="${t('forksT')}">⑂ <b>${num(r.forks ?? 0)}</b></span>
+      ${r.issues?`<span title="${t('issuesT')}">◦ <b>${num(r.issues)}</b></span>`:''}
+      ${date?`<span title="${t('pushT')}">⟳ ${date}</span>`:''}
     </span>
   </a>`;
 }
 
+/* ---------- filtering / rendering ---------- */
 function match(r){
   const q = state.q.toLowerCase();
   const hay = (r.name + ' ' + (r.description||'') + ' ' + (r.language||'')).toLowerCase();
@@ -433,62 +608,74 @@ const sorters = {
 };
 
 function render(){
+  if (!ALL.length && !PKGS.length) return; // keep the skeletons until data arrives
   const shown = ALL.filter(match).sort(sorters[state.sort]);
-  const demos = shown.filter(r=>r.hasPages), rest = shown.filter(r=>!r.hasPages);
+  const demos = shown.filter(r => r.hasPages && !r.isSelf);
 
   el('#cards').innerHTML = demos.length ? demos.map(cardHtml).join('')
-    : `<div class="empty" style="grid-column:1/-1">Nichts gefunden. Suche anpassen.</div>`;
-  el('#items').innerHTML = rest.length ? rest.map(itemHtml).join('') : '';
-  el('#c-demos').textContent = `${demos.length} Seiten live`;
-  el('#c-projects').textContent = `${rest.length} Repos`;
-  reveal(); wirePreviews(); wireTilt();
+    : `<div class="empty" style="grid-column:1/-1">${t('emptyFilter')}</div>`;
+  // every repo, the ones above included (they carry a Site badge), so the count is complete
+  el('#items').innerHTML = shown.map(itemHtml).join('');
+  el('#c-demos').textContent = t('nLive', {n: demos.length});
+  el('#c-projects').textContent = t('nRepos', {n: shown.length});
+
+  const q = state.q.toLowerCase();
+  const pk = PKGS.filter(p => (!state.registry || p.registry === state.registry)
+    && (!q || (p.name + ' ' + p.description).toLowerCase().includes(q)));
+  el('#pkglist').innerHTML = pk.length ? pk.map(pkgHtml).join('')
+    : `<div class="empty" style="grid-column:1/-1">${t('emptyFilter')}</div>`;
+  el('#c-packages').textContent = t('nPkg',
+    {n: pk.length, d: compact(pk.reduce((s,p)=>s+p.downloads,0))});
+
+  stagger(); wirePreviews(); wireTilt();
 }
 
 function buildChips(){
   const langs = [...new Set(ALL.map(r=>r.language).filter(Boolean))]
     .sort((a,b)=>ALL.filter(r=>r.language===b).length-ALL.filter(r=>r.language===a).length).slice(0,6);
-  el('#chips').innerHTML = [['','Alle'],...langs.map(l=>[l,l])]
-    .map(([v,label])=>`<button class="chip" data-lang="${v}" aria-pressed="${state.lang===v}">${label}</button>`).join('');
-  el('#chips').onclick = e => {
-    const b = e.target.closest('.chip'); if(!b) return;
-    state.lang = b.dataset.lang;
-    [...el('#chips').children].forEach(c=>c.setAttribute('aria-pressed', c===b));
-    render();
-  };
+  el('#chips').innerHTML = [['',t('all')],...langs.map(l=>[l,l])]
+    .map(([v,label])=>`<button class="chip" data-lang="${esc(v)}" aria-pressed="${state.lang===v}">${esc(label)}</button>`).join('');
+  const regs = [...new Set(PKGS.map(p=>p.registry))];
+  el('#pchips').innerHTML = [['',t('all')],...regs.map(r=>[r, r==='npm'?'npm':'NuGet'])]
+    .map(([v,label])=>`<button class="chip" data-reg="${esc(v)}" aria-pressed="${state.registry===v}">${label}</button>`).join('');
 }
 
-/* ---------- lazy live iframe previews ---------- */
-function wirePreviews(){
-  document.querySelectorAll('.thumb:not([data-wired])').forEach(t=>{
-    t.dataset.wired = '1';
-    const hint = t.querySelector('.hint');
-    t.addEventListener('click', ()=> window.open(t.dataset.src,'_blank','noopener'));
-    t.style.cursor = 'pointer';
-    if (REDUCED) { hint.remove(); return; }
-    // the manifest already resolved whether this page can be framed at all (https + no
-    // X-Frame-Options / frame-ancestors); those cards keep the panning screenshot instead
-    if (!t.dataset.framable) return;
-    let timer;
-    const load = () => {
-      if (t.dataset.done) return;
-      t.dataset.done = '1'; t.classList.add('loading');
-      const f = document.createElement('iframe');
-      f.loading = 'lazy'; f.title = 'Live Preview'; f.setAttribute('scrolling','no');
-      f.referrerPolicy = 'no-referrer'; f.sandbox = 'allow-scripts allow-same-origin';
-      f.src = t.dataset.src.replace(/^http:/, 'https:'); // http iframe would be blocked as mixed content
-      const fail = setTimeout(()=>{ t.classList.remove('loading');
-        t.querySelector('.hint').textContent = '↗ Preview blockiert — direkt öffnen';
-        t.querySelector('.hint').style.opacity = 1; }, 9000);
-      f.addEventListener('load', ()=>{ clearTimeout(fail);
-        t.classList.remove('loading'); t.classList.add('loaded'); });
-      t.appendChild(f);
-    };
-    t.addEventListener('pointerenter', ()=>{ timer = setTimeout(load, 320); });
-    t.addEventListener('pointerleave', ()=> clearTimeout(timer));
+function stagger(){
+  document.querySelectorAll('#cards .card,#items .item,#pkglist .pkg').forEach((n,i)=>{
+    n.style.animationDelay = Math.min(i,14)*40+'ms';
   });
 }
 
-/* ---------- micro-interactions ---------- */
+/* ---------- live iframe previews ---------- */
+function wirePreviews(){
+  document.querySelectorAll('.thumb:not([data-wired])').forEach(th=>{
+    th.dataset.wired = '1';
+    const hint = th.querySelector('.hint');
+    th.addEventListener('click', ()=> window.open(th.dataset.src,'_blank','noopener'));
+    th.style.cursor = 'pointer';
+    if (REDUCED) { hint.remove(); return; }
+    // the manifest already resolved whether a page can be framed (https, no X-Frame-Options /
+    // frame-ancestors); those cards keep the panning screenshot instead of a frame that never loads
+    if (!th.dataset.framable) return;
+    let timer;
+    const load = () => {
+      if (th.dataset.done) return;
+      th.dataset.done = '1'; th.classList.add('loading');
+      const f = document.createElement('iframe');
+      f.loading = 'lazy'; f.title = 'Live preview'; f.setAttribute('scrolling','no');
+      f.referrerPolicy = 'no-referrer'; f.sandbox = 'allow-scripts allow-same-origin';
+      f.src = th.dataset.src;
+      const fail = setTimeout(()=>{ th.classList.remove('loading');
+        hint.textContent = t('hintOpen'); hint.style.opacity = 1; }, 9000);
+      f.addEventListener('load', ()=>{ clearTimeout(fail);
+        th.classList.remove('loading'); th.classList.add('loaded'); });
+      th.appendChild(f);
+    };
+    th.addEventListener('pointerenter', ()=>{ timer = setTimeout(load, 320); });
+    th.addEventListener('pointerleave', ()=> clearTimeout(timer));
+  });
+}
+
 function wireTilt(){
   if (REDUCED) return;
   document.querySelectorAll('.card:not([data-tilt])').forEach(c=>{
@@ -503,43 +690,43 @@ function wireTilt(){
   });
 }
 
-/* staggered entrance — pure CSS animation, no observer that can silently keep cards invisible */
-function reveal(){
-  document.querySelectorAll('#cards .card,#items .item').forEach((n,i)=>{
-    n.style.animationDelay = Math.min(i,14)*40+'ms';
-  });
-}
-
-function countTo(node, target){
-  if (REDUCED || target < 2){ node.textContent = target; return; }
+function countTo(node, target, fmt = num){
+  if (REDUCED || target < 2){ node.textContent = fmt(target); return; }
   const t0 = performance.now(), dur = 900;
-  const step = t => {
-    const p = Math.min(1,(t-t0)/dur), e = 1-Math.pow(1-p,3);
-    node.textContent = Math.round(target*e).toLocaleString('de-DE');
+  const step = ts => {
+    const p = Math.min(1,(ts-t0)/dur), e = 1-Math.pow(1-p,3);
+    node.textContent = fmt(Math.round(target*e));
     if (p < 1) requestAnimationFrame(step);
   };
   requestAnimationFrame(step);
 }
 
-/* ---------- data ----------
-   shots/manifest.json is the primary source: it is built nightly by .github/workflows/screenshots.yml,
-   which can read each repo's Pages CNAME (the anonymous API cannot) and screenshots every live page.
-   Same-origin and static, so it always loads and costs no rate limit. The live API call afterwards
-   only refreshes stars/descriptions and picks up repos created since the last workflow run. */
-let USER_INFO = null;
-
-function apply(repos, user){
-  ALL = repos;
-  if (user) USER_INFO = user;
-  buildChips(); render();
-  countTo(el('#s-demos'), ALL.filter(r=>r.hasPages).length);
+function updateStats(){
+  countTo(el('#s-demos'), ALL.filter(r=>r.hasPages && !r.isSelf).length);
+  countTo(el('#s-packages'), PKGS.length);
+  countTo(el('#s-downloads'), PKGS.reduce((s,p)=>s+p.downloads,0), compact);
   countTo(el('#s-repos'), USER_INFO?.publicRepos ?? ALL.length);
   countTo(el('#s-stars'), ALL.reduce((s,r)=>s+r.stars,0));
   countTo(el('#s-follow'), USER_INFO?.followers ?? 0);
 }
 
-/* GitHub API shape -> our shape. The API knows neither the Pages CNAME, the screenshot nor
-   whether a page can be framed, so those three stay with whatever the manifest resolved. */
+/* ---------- i18n ---------- */
+function applyLang(){
+  document.documentElement.lang = LANG;
+  document.querySelectorAll('[data-i18n]').forEach(n => n.textContent = t(n.dataset.i18n));
+  el('#q').placeholder = t('searchPh');
+  [...el('#lang').children].forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === LANG));
+  el('#generated').textContent = GENERATED
+    ? ' ' + t('generated', {d: new Date(GENERATED).toLocaleDateString(locale(),
+        {day:'2-digit', month:'long', year:'numeric'})}) : '';
+  buildChips(); render(); updateStats();
+}
+
+/* ---------- data ----------
+   shots/manifest.json is the primary source: built nightly by .github/workflows/screenshots.yml,
+   which resolves each repo's Pages CNAME, screenshots every live page and collects the NuGet and
+   npm packages. Same-origin and static, so it always loads and costs no rate limit. The live API
+   call afterwards only refreshes stars and picks up repos created since the last workflow run. */
 const fromApi = (r, known) => ({
   name: r.name,
   description: r.description || '',
@@ -551,6 +738,7 @@ const fromApi = (r, known) => ({
   pushed: r.pushed_at,
   hasPages: r.has_pages,
   isFork: r.fork,
+  isSelf: r.name === `${USER}.github.io`,
   homepage: /^https?:\/\//.test(r.homepage||'') ? r.homepage : null,
   url: known?.url || (/^https?:\/\//.test(r.homepage||'') ? r.homepage : `https://${USER}.github.io/${r.name}/`),
   shot: known?.shot || null,
@@ -562,9 +750,8 @@ const fromApi = (r, known) => ({
     .then(r => r.ok ? r.json() : null).catch(() => null);
 
   if (m) {
-    apply(m.repos, m.user);
-    el('#generated').textContent = 'Vorschaubilder vom '
-      + new Date(m.generated).toLocaleDateString('de-DE',{day:'2-digit',month:'long',year:'numeric'});
+    ALL = m.repos; PKGS = m.packages || []; USER_INFO = m.user; GENERATED = m.generated;
+    applyLang();
   }
 
   const [repos, user] = await Promise.all([
@@ -575,31 +762,46 @@ const fromApi = (r, known) => ({
 
   if (Array.isArray(repos) && repos.length) {
     const known = new Map((m?.repos || []).map(r => [r.name, r]));
-    apply(
-      repos.filter(r => !r.archived && r.name !== `${USER}.github.io`)
-           .map(r => fromApi(r, known.get(r.name))),
-      user && {login:user.login, publicRepos:user.public_repos, followers:user.followers});
+    ALL = repos.filter(r => !r.archived).map(r => fromApi(r, known.get(r.name)));
+    if (user) USER_INFO = {login:user.login, publicRepos:user.public_repos, followers:user.followers};
+    buildChips(); render(); updateStats();
   } else if (!m) {
-    el('#cards').innerHTML = `<div class="empty" style="grid-column:1/-1">
-      Daten konnten nicht geladen werden. <a href="https://github.com/${USER}?tab=repositories"
-      style="color:var(--cyan)">Direkt auf GitHub ansehen ↗</a></div>`;
-    el('#live-pill').textContent = 'Live Demos & Open Source · offline';
+    el('#cards').innerHTML = `<div class="empty" style="grid-column:1/-1">${t('failed')}
+      <a href="https://github.com/${USER}?tab=repositories" style="color:var(--cyan)">${t('onGithub')}</a></div>`;
+    el('#live-pill').textContent = t('offline');
   }
 })();
 
 /* ---------- chrome ---------- */
+applyLang();
 el('#q').addEventListener('input', e=>{ state.q = e.target.value; render(); });
 el('#sort').addEventListener('change', e=>{ state.sort = e.target.value; render(); });
+el('#chips').addEventListener('click', e=>{
+  const b = e.target.closest('.chip'); if(!b) return;
+  state.lang = b.dataset.lang;
+  [...el('#chips').children].forEach(c=>c.setAttribute('aria-pressed', c===b));
+  render();
+});
+el('#pchips').addEventListener('click', e=>{
+  const b = e.target.closest('.chip'); if(!b) return;
+  state.registry = b.dataset.reg;
+  [...el('#pchips').children].forEach(c=>c.setAttribute('aria-pressed', c===b));
+  render();
+});
+el('#lang').addEventListener('click', e=>{
+  const b = e.target.closest('button'); if(!b || b.dataset.lang === LANG) return;
+  LANG = localStorage.fgLang = b.dataset.lang;
+  applyLang();
+});
 addEventListener('keydown', e=>{
   if (e.key === '/' && !/input|textarea|select/i.test(document.activeElement.tagName)){
     e.preventDefault(); el('#q').focus();
   }
 });
 
-const themeBtn = el('#theme');
-const setTheme = t => { document.documentElement.dataset.theme = t; localStorage.fgTheme = t; };
+const setTheme = th => { document.documentElement.dataset.theme = th; localStorage.fgTheme = th; };
 setTheme(localStorage.fgTheme || 'dark');
-themeBtn.onclick = () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+el('#theme').onclick = () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
 
 const spot = el('#spot');
 if (!REDUCED && matchMedia('(pointer:fine)').matches){

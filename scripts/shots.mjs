@@ -32,8 +32,9 @@ const api = async path => {
   return r.json();
 };
 
+// every non-archived public repo, this one included, so the site can show the full count
 const repos = (await api(`users/${USER}/repos?per_page=100&sort=pushed`))
-  .filter(r => !r.archived && r.name !== SELF);
+  .filter(r => !r.archived);
 
 /** Prefer https when the host serves it — an http page cannot be shown in an iframe. */
 async function preferHttps(url) {
@@ -107,6 +108,7 @@ for (const repo of repos) {
     pushed: repo.pushed_at,
     hasPages: repo.has_pages,
     isFork: repo.fork,
+    isSelf: repo.name === SELF,
     homepage: /^https?:\/\//.test(repo.homepage || '') ? repo.homepage : null,
   };
   if (!repo.has_pages) { entries.push(base); continue; }
@@ -155,12 +157,60 @@ for (const f of await readdir(SHOTS)) {
   if (f.endsWith('.jpg') && !keep.has(f)) { await unlink(`${SHOTS}/${f}`); console.log(`removed ${f}`); }
 }
 
+/* Published packages. Fetched here rather than in the browser so the page stays on one
+   same-origin request and does not depend on registry CORS policies. */
+async function nugetPackages() {
+  const r = await fetch(`https://azuresearch-usnc.nuget.org/query?q=owner:${USER}&take=100&prerelease=false`,
+    { signal: AbortSignal.timeout(25000) });
+  if (!r.ok) throw new Error(`nuget search ${r.status}`);
+  const { data } = await r.json();
+  return data.map(p => ({
+    registry: 'nuget',
+    name: p.id,
+    version: p.version,
+    description: p.description || '',
+    downloads: p.totalDownloads || 0,
+    icon: p.iconUrl || null,
+    url: `https://www.nuget.org/packages/${p.id}`,
+    repo: /github\.com/.test(p.projectUrl || '') ? p.projectUrl : null,
+    tags: (p.tags || []).slice(0, 3),
+  }));
+}
+
+async function npmPackages() {
+  const r = await fetch(`https://registry.npmjs.org/-/v1/search?text=maintainer:${USER}&size=100`,
+    { signal: AbortSignal.timeout(25000) });
+  if (!r.ok) throw new Error(`npm search ${r.status}`);
+  const { objects } = await r.json();
+  return Promise.all(objects.map(async ({ package: p }) => ({
+    registry: 'npm',
+    name: p.name,
+    version: p.version,
+    description: p.description || '',
+    downloads: await fetch(`https://api.npmjs.org/downloads/point/last-year/${p.name}`,
+      { signal: AbortSignal.timeout(15000) })
+      .then(x => x.ok ? x.json() : null).then(x => x?.downloads || 0).catch(() => 0),
+    icon: null,
+    url: `https://www.npmjs.com/package/${p.name}`,
+    repo: /github\.com/.test(p.links?.repository || '') ? p.links.repository : null,
+    tags: (p.keywords || []).slice(0, 3),
+  })));
+}
+
+const packages = (await Promise.all([
+  nugetPackages().catch(e => (console.log(`nuget failed: ${e.message}`), [])),
+  npmPackages().catch(e => (console.log(`npm failed: ${e.message}`), [])),
+])).flat().sort((a, b) => b.downloads - a.downloads);
+
 const user = await api(`users/${USER}`);
 await writeFile(`${SHOTS}/manifest.json`, JSON.stringify({
   generated: new Date().toISOString(),
   user: { login: user.login, publicRepos: user.public_repos, followers: user.followers },
   repos: entries,
+  packages,
 }, null, 1) + '\n');
 
 const live = entries.filter(e => e.hasPages).length;
-console.log(`\nmanifest.json: ${entries.length} repos, ${live} with pages, ${keep.size} screenshots`);
+const dl = packages.reduce((s, p) => s + p.downloads, 0);
+console.log(`\nmanifest.json: ${entries.length} repos, ${live} with pages, ${keep.size} screenshots, `
+  + `${packages.length} packages, ${dl.toLocaleString('en-US')} downloads`);

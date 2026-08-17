@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-17T19:14:17.294Z",
+ "generated": "2026-08-17T19:37:19.097Z",
  "user": {
   "login": "fgilde",
   "publicRepos": 52,
@@ -7,388 +7,703 @@
  },
  "repos": [
   {
-   "name": "CheckoutAndBuild",
-   "description": "Productdescription  Create your own local Complete Build Process.  CheckoutAndBuild is a powerfull VisualStudio TeamExplorer Extension that allows you to manage, clean, checkout or build your solutions easy. With CheckoutAndBuild you can create a fast and powerfull CI run local on your machine, to ensure everything before checkin. Create your One-Click behavoir to clean, checkout, build run tests or many more",
-   "language": "C#",
-   "stars": 7,
-   "pushed": "2026-08-17T18:50:37Z",
-   "hasPages": true,
-   "url": "https://fgilde.github.io/CheckoutAndBuild/",
-   "shot": "CheckoutAndBuild.jpg"
-  },
-  {
    "name": "fgilde",
    "description": "",
    "language": "",
    "stars": 5,
-   "pushed": "2026-08-17T18:47:36Z",
-   "hasPages": false
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-08-17T19:22:09Z",
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
+  },
+  {
+   "name": "CheckoutAndBuild",
+   "description": "Productdescription  Create your own local Complete Build Process.  CheckoutAndBuild is a powerfull VisualStudio TeamExplorer Extension that allows you to manage, clean, checkout or build your solutions easy. With CheckoutAndBuild you can create a fast and powerfull CI run local on your machine, to ensure everything before checkin. Create your One-Click behavoir to clean, checkout, build run tests or many more",
+   "language": "C#",
+   "stars": 7,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-08-17T18:50:37Z",
+   "hasPages": true,
+   "isFork": false,
+   "homepage": null,
+   "url": "https://fgilde.github.io/CheckoutAndBuild/",
+   "shot": "CheckoutAndBuild.jpg",
+   "framable": true
   },
   {
    "name": "AspireUI",
    "description": "",
    "language": "TypeScript",
    "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-08-17T13:09:05Z",
    "hasPages": true,
+   "isFork": false,
+   "homepage": null,
    "url": "https://fgilde.github.io/AspireUI/",
-   "shot": "AspireUI.jpg"
+   "shot": "AspireUI.jpg",
+   "framable": true
   },
   {
    "name": "CoworkeeNextJs",
    "description": "",
    "language": "TypeScript",
    "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-08-17T13:07:40Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "MudBlazor.Extensions",
    "description": "MudBlazor.Extensions from https://www.mudex.org is a small extension for MudBlazor from https://mudblazor.com",
    "language": "C#",
    "stars": 328,
+   "forks": 32,
+   "issues": 14,
+   "topics": [],
    "pushed": "2026-08-17T10:23:20Z",
    "hasPages": true,
+   "isFork": false,
+   "homepage": "http://www.mudex.org",
    "url": "https://www.mudex.org",
-   "shot": "MudBlazor.Extensions.jpg"
+   "shot": "MudBlazor.Extensions.jpg",
+   "framable": true
   },
   {
    "name": "ResourceTranslator.CLI",
    "description": "This tool can translate your resource files with Microsoft Cognitive Service for translations",
    "language": "C#",
    "stars": 7,
+   "forks": 1,
+   "issues": 1,
+   "topics": [],
    "pushed": "2026-08-17T10:19:24Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "Playzor",
    "description": "A Blazor playground you can host, embed or build on - the packages behind playzor.net",
    "language": "C#",
    "stars": 7,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-08-17T10:14:27Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "hausverwaltung",
    "description": "",
    "language": "TypeScript",
    "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-08-16T09:03:18Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "videola",
    "description": "Vollstaendiger webbasierter Video-Editor: Multi-Track, Effekte, Keyframes, Audio-Studio, Templates, MCP/API. Web, Desktop, Mobile, Docker.",
    "language": "TypeScript",
    "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-08-14T10:38:20Z",
    "hasPages": true,
+   "isFork": false,
+   "homepage": null,
    "url": "https://videola.app/",
-   "shot": "videola.jpg"
+   "shot": "videola.jpg",
+   "framable": true
   },
   {
    "name": "Audiola",
    "description": "WPF Audio editor",
    "language": "C#",
    "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-08-14T09:27:27Z",
    "hasPages": true,
+   "isFork": false,
+   "homepage": null,
    "url": "https://audiola.de/",
-   "shot": "Audiola.jpg"
+   "shot": "Audiola.jpg",
+   "framable": true
   },
   {
    "name": "AI-Ming",
    "description": "",
    "language": "C#",
    "stars": 21,
+   "forks": 8,
+   "issues": 9,
+   "topics": [],
    "pushed": "2026-08-14T08:45:45Z",
    "hasPages": true,
+   "isFork": false,
+   "homepage": null,
    "url": "http://poweraim.de/",
-   "shot": "AI-Ming.jpg"
+   "shot": "AI-Ming.jpg",
+   "framable": false
   },
   {
    "name": "MuseForge",
    "description": "",
    "language": "Python",
    "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-08-10T22:45:11Z",
    "hasPages": true,
+   "isFork": false,
+   "homepage": null,
    "url": "https://fgilde.github.io/MuseForge/",
-   "shot": "MuseForge.jpg"
+   "shot": "MuseForge.jpg",
+   "framable": true
+  },
+  {
+   "name": "Maestro",
+   "description": "An all-in-one, 100% local AI video, image, and music studio. Director mode plans full music videos and short films from a single prompt. Built on the WanGP pipeline. Install via Pinokio.",
+   "language": "Python",
+   "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-08-08T21:31:22Z",
+   "hasPages": false,
+   "isFork": true,
+   "homepage": "https://pinokio.computer"
   },
   {
    "name": "PveWelcome",
    "description": "",
    "language": "C#",
    "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-08-02T19:06:30Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "Nextended",
    "description": "Moved package nExt from CodePlex to github and updated to .net5",
    "language": "C#",
    "stars": 13,
+   "forks": 2,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-07-30T22:21:41Z",
    "hasPages": true,
+   "isFork": false,
+   "homepage": null,
    "url": "https://fgilde.github.io/Nextended/",
-   "shot": "Nextended.jpg"
+   "shot": "Nextended.jpg",
+   "framable": true
+  },
+  {
+   "name": "ej2-themestudio",
+   "description": "A web-based tool that can be used to customize the Essential JS 2 component themes. It supports importing and exporting customized themes, and filtering to select which components to change",
+   "language": "SCSS",
+   "stars": 4,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-07-27T12:42:18Z",
+   "hasPages": false,
+   "isFork": true,
+   "homepage": null
   },
   {
    "name": "aspire.love",
    "description": "Create a local and azure hostable environment for your lovable projects or other supabase client projects",
    "language": "C#",
    "stars": 7,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-07-24T11:33:29Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": "https://www.aspire.love"
   },
   {
    "name": "AuralizeBlazor",
    "description": "AuralizeBlazor is a wrapper component for audioMotion-analyzer.",
    "language": "C#",
    "stars": 27,
+   "forks": 2,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-07-23T23:09:50Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": "https://auralizeblazor.azurewebsites.net/"
   },
   {
    "name": "blobbyVolley",
    "description": "Moderner Blobby-Volley-Clone in 3D (Three.js) — CPU-Gegner & WebRTC-Online-Multiplayer",
    "language": "TypeScript",
    "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-07-16T15:04:20Z",
    "hasPages": true,
+   "isFork": false,
+   "homepage": null,
    "url": "https://fgilde.github.io/blobbyVolley/",
-   "shot": "blobbyVolley.jpg"
+   "shot": "blobbyVolley.jpg",
+   "framable": true
   },
   {
    "name": "PowerClean",
    "description": "",
    "language": "C#",
    "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-07-16T14:41:09Z",
    "hasPages": true,
+   "isFork": false,
+   "homepage": "https://fgilde.github.io/PowerClean/",
    "url": "https://fgilde.github.io/PowerClean/",
-   "shot": "PowerClean.jpg"
+   "shot": "PowerClean.jpg",
+   "framable": true
   },
   {
    "name": "DrunkenRecords",
    "description": "",
    "language": "HTML",
    "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-07-01T13:23:02Z",
    "hasPages": true,
+   "isFork": false,
+   "homepage": null,
    "url": "https://fgilde.github.io/DrunkenRecords/",
-   "shot": "DrunkenRecords.jpg"
+   "shot": null,
+   "framable": true
   },
   {
    "name": "LocalAIHub",
    "description": "",
    "language": "Python",
    "stars": 3,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-05-20T18:19:37Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "MudExRichTextEditor",
    "description": "Quill based RichEditor component for MudBlazor",
    "language": "C#",
    "stars": 133,
+   "forks": 26,
+   "issues": 15,
+   "topics": [],
    "pushed": "2026-04-30T09:40:15Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
+  },
+  {
+   "name": "AspireCommunityToolkit",
+   "description": "A community project with additional components and extensions for Aspire",
+   "language": "",
+   "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-01-20T15:47:26Z",
+   "hasPages": false,
+   "isFork": true,
+   "homepage": "https://aspire.dev/community/contributors/#-aspire-community-toolkit-contributors"
   },
   {
    "name": "UNLowCoder",
    "description": "",
    "language": "C#",
    "stars": 9,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2026-01-15T13:34:51Z",
    "hasPages": true,
+   "isFork": false,
+   "homepage": null,
    "url": "https://fgilde.github.io/UNLowCoder/",
-   "shot": "UNLowCoder.jpg"
+   "shot": "UNLowCoder.jpg",
+   "framable": true
   },
   {
    "name": "BlazorParameterCastingMagic",
    "description": "The BlazorParameterCastingMagic package provides a way to handle dynamic casting of parameters in Blazor components because Blazor does not natively support implicit conversions for parameters ",
    "language": "C#",
    "stars": 6,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2025-12-12T14:47:02Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "AbpMudExTheme",
    "description": "",
    "language": "HTML",
    "stars": 7,
+   "forks": 1,
+   "issues": 0,
+   "topics": [],
    "pushed": "2025-07-15T11:19:55Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "BlazorJS",
    "description": "BlazorJS is a small package to use a Scripts Component on every page or component to load JavaScript files when not loaded, and unload automatically.",
    "language": "JavaScript",
    "stars": 13,
+   "forks": 2,
+   "issues": 0,
+   "topics": [],
    "pushed": "2025-01-07T08:49:26Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "GptInvoke",
    "description": "",
    "language": "C#",
    "stars": 8,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2024-12-12T12:04:40Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "ScreenCaptureBot",
    "description": "This Project was created by the Idea to create a FPS Playing Game bot based on Image Detection. But I never finished it. However its also a nice sample for Screencapturing and Live Object Detection",
    "language": "C#",
    "stars": 6,
+   "forks": 1,
+   "issues": 0,
+   "topics": [],
    "pushed": "2024-06-19T12:41:16Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "MakeGenericAgain",
    "description": "Problem is that nswag client code generation from open api specification or swagger generates classes without generics. This tool can be used afterwards to make classes generic again",
    "language": "C#",
    "stars": 11,
+   "forks": 5,
+   "issues": 1,
+   "topics": [],
    "pushed": "2024-06-07T05:57:39Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "ngx-property-grid",
    "description": "",
    "language": "TypeScript",
    "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2023-12-07T13:22:32Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "ngx-template",
    "description": "",
    "language": "HTML",
    "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2023-12-07T12:55:11Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "SABIO.ClientApi",
    "description": "An api client for SABIO aka Serviceware Knowledge from https://www.getsabio.com/de/",
    "language": "CSS",
    "stars": 6,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2023-10-24T14:34:26Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
+  },
+  {
+   "name": "MudBlazor.Extensions.Explorer",
+   "description": "More Components and Services for the MudBlazor ecosystem",
+   "language": "",
+   "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2023-10-09T10:03:00Z",
+   "hasPages": false,
+   "isFork": true,
+   "homepage": null
   },
   {
    "name": "embed-fonts",
    "description": "",
    "language": "JavaScript",
    "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2023-09-11T10:29:32Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "dockwipe",
    "description": "",
    "language": "JavaScript",
    "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2023-06-29T07:56:52Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "teleprompter",
    "description": "",
    "language": "JavaScript",
    "stars": 4,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2023-04-21T08:12:36Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "remote-dependencies",
    "description": "Simple tool to have mapping for remote files to download them locally",
    "language": "JavaScript",
    "stars": 6,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2023-02-08T10:01:01Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "NetCoreCleanArchitectureSolutionTemplate",
    "description": "This is a Visual Studio Template to create a new .netcore 3 solution with clean architecture pattern. ",
    "language": "C#",
    "stars": 4,
+   "forks": 0,
+   "issues": 1,
+   "topics": [],
    "pushed": "2022-12-08T06:19:46Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
+  },
+  {
+   "name": "npm-expansions",
+   "description": "Send us a pull request by editing expansions.txt",
+   "language": "",
+   "stars": 4,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2022-11-30T14:36:13Z",
+   "hasPages": false,
+   "isFork": true,
+   "homepage": "http://npm.im/npm-expansions"
+  },
+  {
+   "name": "BlazeOrbital",
+   "description": "Sample application for Blazor WebAssembly on .NET 6",
+   "language": "C#",
+   "stars": 4,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2022-04-22T13:02:56Z",
+   "hasPages": false,
+   "isFork": true,
+   "homepage": null
   },
   {
    "name": "ConfigHandling",
    "description": "This Project provides easy handling for your appsettings",
    "language": "",
    "stars": 4,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2022-02-16T12:41:05Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "CodeBlueComponentTests",
    "description": "CodeBlueComponentLibraryTests",
    "language": "SCSS",
    "stars": 4,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2021-11-10T13:54:21Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "CleanArchitectureBase",
    "description": "Base Structure for Clean Architecture Project",
    "language": "C#",
    "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2021-09-17T14:25:17Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "PongGame",
    "description": "",
    "language": "C#",
    "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2021-07-22T14:23:16Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "CompleXStudio",
    "description": "",
    "language": "HTML",
    "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2021-07-22T11:28:42Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "ChocoMaker",
    "description": "",
    "language": "C#",
    "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2021-07-22T11:10:25Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "BeamerStreamer",
    "description": "This is a project to create amazing effects on your wall behind your tv",
    "language": "C#",
    "stars": 8,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2021-06-30T13:39:56Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "lastverteilung",
    "description": "",
    "language": "C#",
    "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2018-07-08T13:20:42Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   },
   {
    "name": "ccd",
    "description": "",
    "language": "C#",
    "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
    "pushed": "2017-04-25T15:03:04Z",
-   "hasPages": false
+   "hasPages": false,
+   "isFork": false,
+   "homepage": null
   }
  ]
 }

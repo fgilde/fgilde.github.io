@@ -168,8 +168,11 @@ select.sort{padding:10px 12px;border-radius:14px;border:1px solid var(--border);
 .thumb .mark{position:absolute;inset:0;display:grid;place-items:center;font-size:56px;font-weight:850;
   letter-spacing:-.05em;color:rgba(255,255,255,.14);transition:opacity .4s}
 html[data-theme=light] .thumb .mark{color:rgba(10,14,26,.13)}
-.thumb .shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;
-  transform:scale(1.001)}
+/* one tall screenshot per page: the card crops the top, hover pans down to the bottom, so
+   every page gets a real scrolling preview even when it cannot be framed in an iframe */
+.thumb .shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:center top;transition:object-position 7s linear}
+.card:hover .thumb .shot{object-position:center bottom}
 .thumb iframe{position:absolute;top:0;left:0;width:333.34%;height:333.34%;transform:scale(.3);
   transform-origin:0 0;border:0;pointer-events:none;opacity:0;transition:opacity .6s}
 .thumb.loaded iframe{opacity:1}
@@ -201,17 +204,28 @@ html[data-theme=light] .thumb .mark{color:rgba(10,14,26,.13)}
 .acts a:hover{border-color:var(--border-2);background:var(--surface-2);transform:translateY(-1px)}
 .acts a.go{border:0;color:#fff;background:linear-gradient(135deg,var(--violet),var(--cyan))}
 
-/* compact list for repos without pages */
-.list{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
-.item{display:flex;gap:12px;align-items:flex-start;padding:15px 17px;border-radius:16px;
-  border:1px solid var(--border);background:var(--surface);transition:.25s;
-  animation:rise .45s cubic-bezier(.2,.7,.2,1) both}
-.item:hover{border-color:var(--border-2);transform:translateY(-2px);background:var(--surface-2)}
-.item .t{font-weight:680;font-size:14.5px;letter-spacing:-.01em}
-.item .d{color:var(--muted);font-size:12.8px;display:-webkit-box;-webkit-line-clamp:2;
-  -webkit-box-orient:vertical;overflow:hidden;margin-top:3px}
-.item .s{margin-left:auto;font-size:12.5px;color:var(--dim);font-weight:650;white-space:nowrap;
-  display:flex;align-items:center;gap:5px}
+/* stat cards for repos without their own page */
+.list{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
+.item{position:relative;display:flex;flex-direction:column;gap:9px;padding:18px 19px;border-radius:18px;
+  border:1px solid var(--border);background:var(--surface);backdrop-filter:blur(8px);transition:.25s;
+  animation:rise .45s cubic-bezier(.2,.7,.2,1) both;overflow:hidden}
+.item::after{content:"";position:absolute;left:0;top:0;width:3px;height:100%;
+  background:linear-gradient(var(--violet),var(--cyan));opacity:0;transition:opacity .25s}
+.item:hover{border-color:var(--border-2);transform:translateY(-3px);background:var(--surface-2);
+  box-shadow:var(--shadow)}
+.item:hover::after{opacity:1}
+.item .t{font-weight:700;font-size:15px;letter-spacing:-.015em;display:flex;align-items:center;gap:8px}
+.item .d{color:var(--muted);font-size:12.9px;display:-webkit-box;-webkit-line-clamp:2;
+  -webkit-box-orient:vertical;overflow:hidden}
+.item .nums{display:flex;gap:13px;flex-wrap:wrap;align-items:center;margin-top:auto;padding-top:4px;
+  font-size:12.3px;color:var(--dim);font-weight:650;font-variant-numeric:tabular-nums}
+.item .nums span{display:inline-flex;align-items:center;gap:5px}
+.item .nums b{color:var(--text);font-weight:700}
+.topics{display:flex;gap:6px;flex-wrap:wrap}
+.topic{font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid var(--border);
+  color:var(--dim);font-weight:650;white-space:nowrap}
+.tag.fork{color:var(--dim);border-color:var(--border);background:transparent}
+.tag.live{color:var(--lime);border-color:rgba(163,230,53,.32);background:rgba(163,230,53,.09)}
 
 .empty{padding:52px;text-align:center;color:var(--dim);border:1px dashed var(--border);border-radius:var(--radius)}
 .skel{height:330px;border-radius:var(--radius);border:1px solid var(--border);
@@ -313,7 +327,7 @@ footer{margin-top:110px;padding:44px 0 60px;border-top:1px solid var(--border);c
     <div class="shead">
       <div>
         <h2>📦 Libraries, Tools &amp; Experimente</h2>
-        <p>Repos ohne eigene Seite — Pakete, CLIs und Spielwiesen.</p>
+        <p>Alle übrigen Repos — Pakete, CLIs, Spielwiesen und Forks.</p>
       </div>
       <span class="count" id="c-projects"></span>
     </div>
@@ -362,9 +376,9 @@ function cardHtml(r){
     ? `<img class="shot" src="shots/${encodeURIComponent(r.shot)}" alt="Vorschau von ${r.name}"
             loading="lazy" decoding="async" onerror="this.remove()">` : '';
   return `<article class="card">
-    <div class="thumb" data-src="${r.url}">
+    <div class="thumb" data-src="${r.url}" ${r.framable?'data-framable="1"':''}>
       <div class="mark">${initials(r.name)}</div>${shot}
-      <div class="hint">${r.shot?'🔍 Hover für Live-Ansicht':'👀 Hover für Live-Preview'}</div>
+      <div class="hint">${r.framable?'🔍 Hover für Live-Ansicht':'↗ Seite öffnen'}</div>
       <div class="spinner"></div>
     </div>
     <div class="body">
@@ -388,13 +402,22 @@ function cardHtml(r){
 
 function itemHtml(r){
   const color = LANG_COLORS[r.language] || '#66718f';
+  const date = r.pushed ? new Date(r.pushed).toLocaleDateString('de-DE',{month:'short',year:'numeric'}) : '';
   return `<a class="item" href="https://github.com/${USER}/${r.name}" target="_blank" rel="noopener">
-    <i class="lang-dot" style="background:${color};margin-top:6px;flex:0 0 auto"></i>
-    <span style="min-width:0">
-      <span class="t">${r.name}</span>
-      <span class="d">${r.description || (r.language||'Repo')}</span>
+    <span class="t">
+      ${r.language?`<i class="lang-dot" style="background:${color};flex:0 0 auto"></i>`:''}
+      <span style="min-width:0;overflow:hidden;text-overflow:ellipsis">${r.name}</span>
+      ${r.isFork?'<span class="tag fork">Fork</span>':''}
+      ${r.homepage?'<span class="tag live">Site</span>':''}
     </span>
-    <span class="s">★ ${r.stars}</span>
+    <span class="d">${r.description || (r.language ? r.language + ' Repo' : 'Repo')}</span>
+    ${r.topics?.length?`<span class="topics">${r.topics.map(t=>`<span class="topic">${t}</span>`).join('')}</span>`:''}
+    <span class="nums">
+      <span title="Stars">★ <b>${r.stars}</b></span>
+      <span title="Forks">⑂ <b>${r.forks ?? 0}</b></span>
+      ${r.issues?`<span title="Offene Issues">◦ <b>${r.issues}</b></span>`:''}
+      ${date?`<span title="Letzter Push">⟳ ${date}</span>`:''}
+    </span>
   </a>`;
 }
 
@@ -442,10 +465,9 @@ function wirePreviews(){
     t.addEventListener('click', ()=> window.open(t.dataset.src,'_blank','noopener'));
     t.style.cursor = 'pointer';
     if (REDUCED) { hint.remove(); return; }
-    if (t.dataset.src.startsWith('http://')) { // an http page is blocked in an https iframe
-      hint.textContent = '↗ Seite öffnen (kein HTTPS)';
-      return;
-    }
+    // the manifest already resolved whether this page can be framed at all (https + no
+    // X-Frame-Options / frame-ancestors); those cards keep the panning screenshot instead
+    if (!t.dataset.framable) return;
     let timer;
     const load = () => {
       if (t.dataset.done) return;
@@ -516,16 +538,23 @@ function apply(repos, user){
   countTo(el('#s-follow'), USER_INFO?.followers ?? 0);
 }
 
-/* GitHub API shape -> our shape. No Pages CNAME here, so keep whatever the manifest knew. */
+/* GitHub API shape -> our shape. The API knows neither the Pages CNAME, the screenshot nor
+   whether a page can be framed, so those three stay with whatever the manifest resolved. */
 const fromApi = (r, known) => ({
   name: r.name,
   description: r.description || '',
   language: r.language || '',
   stars: r.stargazers_count,
+  forks: r.forks_count,
+  issues: r.open_issues_count,
+  topics: (r.topics?.length ? r.topics.slice(0,4) : known?.topics) || [],
   pushed: r.pushed_at,
   hasPages: r.has_pages,
+  isFork: r.fork,
+  homepage: /^https?:\/\//.test(r.homepage||'') ? r.homepage : null,
   url: known?.url || (/^https?:\/\//.test(r.homepage||'') ? r.homepage : `https://${USER}.github.io/${r.name}/`),
   shot: known?.shot || null,
+  framable: known?.framable ?? false,
 });
 
 (async () => {
@@ -547,7 +576,7 @@ const fromApi = (r, known) => ({
   if (Array.isArray(repos) && repos.length) {
     const known = new Map((m?.repos || []).map(r => [r.name, r]));
     apply(
-      repos.filter(r => !r.fork && !r.archived && r.name !== `${USER}.github.io`)
+      repos.filter(r => !r.archived && r.name !== `${USER}.github.io`)
            .map(r => fromApi(r, known.get(r.name))),
       user && {login:user.login, publicRepos:user.public_repos, followers:user.followers});
   } else if (!m) {

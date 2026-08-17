@@ -111,7 +111,8 @@ for (const repo of repos) {
     isSelf: repo.name === SELF,
     homepage: /^https?:\/\//.test(repo.homepage || '') ? repo.homepage : null,
   };
-  if (!repo.has_pages) { entries.push(base); continue; }
+  // no screenshot of this very page, and none for repos without a page
+  if (!repo.has_pages || repo.name === SELF) { entries.push(base); continue; }
 
   const url = await pageUrl(repo);
   const framable = await isFramable(url);

@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-17T20:28:14.688Z",
+ "generated": "2026-08-17T20:31:57.123Z",
  "user": {
   "login": "fgilde",
   "publicRepos": 52,
@@ -14,14 +14,11 @@
    "forks": 0,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-08-17T19:57:06Z",
+   "pushed": "2026-08-17T20:29:22Z",
    "hasPages": true,
    "isFork": false,
    "isSelf": true,
-   "homepage": null,
-   "url": "https://fgilde.github.io/",
-   "shot": "fgilde.github.io.jpg",
-   "framable": true
+   "homepage": null
   },
   {
    "name": "fgilde",
@@ -31,7 +28,7 @@
    "forks": 0,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-08-17T19:55:19Z",
+   "pushed": "2026-08-17T20:29:01Z",
    "hasPages": false,
    "isFork": false,
    "isSelf": false,

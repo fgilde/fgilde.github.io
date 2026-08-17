@@ -4,11 +4,6 @@ on:
   schedule:
     - cron: '30 3 * * *' # daily, before the profile snake job
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/shots.mjs'
-      - '.github/workflows/screenshots.yml'
 
 permissions:
   contents: write

@@ -1,28 +1,11 @@
 {
- "generated": "2026-08-17T19:53:04.051Z",
+ "generated": "2026-08-17T20:28:14.688Z",
  "user": {
   "login": "fgilde",
   "publicRepos": 52,
   "followers": 30
  },
  "repos": [
-  {
-   "name": "CheckoutAndBuild",
-   "description": "Productdescription  Create your own local Complete Build Process.  CheckoutAndBuild is a powerfull VisualStudio TeamExplorer Extension that allows you to manage, clean, checkout or build your solutions easy. With CheckoutAndBuild you can create a fast and powerfull CI run local on your machine, to ensure everything before checkin. Create your One-Click behavoir to clean, checkout, build run tests or many more",
-   "language": "C#",
-   "stars": 7,
-   "forks": 0,
-   "issues": 0,
-   "topics": [],
-   "pushed": "2026-08-17T19:45:58Z",
-   "hasPages": true,
-   "isFork": false,
-   "isSelf": false,
-   "homepage": null,
-   "url": "https://fgilde.github.io/CheckoutAndBuild/",
-   "shot": "CheckoutAndBuild.jpg",
-   "framable": true
-  },
   {
    "name": "fgilde.github.io",
    "description": "Live showcase of every fgilde repo with a GitHub Pages site — https://fgilde.github.io/",
@@ -31,7 +14,7 @@
    "forks": 0,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-08-17T19:40:07Z",
+   "pushed": "2026-08-17T19:57:06Z",
    "hasPages": true,
    "isFork": false,
    "isSelf": true,
@@ -48,11 +31,28 @@
    "forks": 0,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-08-17T19:22:09Z",
+   "pushed": "2026-08-17T19:55:19Z",
    "hasPages": false,
    "isFork": false,
    "isSelf": false,
    "homepage": null
+  },
+  {
+   "name": "CheckoutAndBuild",
+   "description": "Productdescription  Create your own local Complete Build Process.  CheckoutAndBuild is a powerfull VisualStudio TeamExplorer Extension that allows you to manage, clean, checkout or build your solutions easy. With CheckoutAndBuild you can create a fast and powerfull CI run local on your machine, to ensure everything before checkin. Create your One-Click behavoir to clean, checkout, build run tests or many more",
+   "language": "C#",
+   "stars": 7,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-08-17T19:45:58Z",
+   "hasPages": true,
+   "isFork": false,
+   "isSelf": false,
+   "homepage": null,
+   "url": "https://fgilde.github.io/CheckoutAndBuild/",
+   "shot": "CheckoutAndBuild.jpg",
+   "framable": true
   },
   {
    "name": "AspireUI",
@@ -345,9 +345,9 @@
    "hasPages": true,
    "isFork": false,
    "isSelf": false,
-   "homepage": null,
-   "url": "https://fgilde.github.io/DrunkenRecords/",
-   "shot": null,
+   "homepage": "https://drunkenrecords.de",
+   "url": "https://drunkenrecords.de",
+   "shot": "DrunkenRecords.jpg",
    "framable": true
   },
   {

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://fgilde.github.io/QuickRun/quickrun.schema.json
+name: fgilde.github.io
+description: "The personal site. Static files, served locally so relative paths behave."
+
+requires:
+  - tool: node
+    version: ">=20.0"
+    install: https://nodejs.org
+
+tasks:
+  - name: serve
+    run: npx --yes serve@14 --listen 5000 .
+    readyWhen: {http: "http://localhost:5000"}
+    open: true

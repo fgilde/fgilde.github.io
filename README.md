@@ -3,6 +3,8 @@
 Landing page for **https://fgilde.github.io/** — a live showcase of every repo of mine that ships a GitHub Pages
 site or a custom domain.
 
+[![QuickRun](https://quickrun.org/badge.svg)](https://quickrun.org/run?repo=fgilde/fgilde.github.io)
+
 ## How it works
 
 - The page itself is a single file: [`index.html`](index.html). No build step, no framework, no dependencies.

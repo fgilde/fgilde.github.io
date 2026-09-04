@@ -1,11 +1,39 @@
 {
- "generated": "2026-09-03T05:00:16.210Z",
+ "generated": "2026-09-04T03:42:47.630Z",
  "user": {
   "login": "fgilde",
   "publicRepos": 64,
   "followers": 31
  },
  "repos": [
+  {
+   "name": "fgilde",
+   "description": "",
+   "language": "",
+   "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-09-03T05:13:41Z",
+   "hasPages": false,
+   "isFork": false,
+   "isSelf": false,
+   "homepage": null
+  },
+  {
+   "name": "fgilde.github.io",
+   "description": "Live showcase of every fgilde repo with a GitHub Pages site — https://fgilde.github.io/",
+   "language": "HTML",
+   "stars": 0,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-09-03T05:00:17Z",
+   "hasPages": true,
+   "isFork": false,
+   "isSelf": true,
+   "homepage": null
+  },
   {
    "name": "QuickRun",
    "description": "Run any git repository with one click - from the GitHub page you found it on",
@@ -22,34 +50,6 @@
    "url": "https://fgilde.github.io/QuickRun/",
    "shot": "QuickRun.jpg",
    "framable": true
-  },
-  {
-   "name": "fgilde",
-   "description": "",
-   "language": "",
-   "stars": 5,
-   "forks": 0,
-   "issues": 0,
-   "topics": [],
-   "pushed": "2026-09-02T04:12:48Z",
-   "hasPages": false,
-   "isFork": false,
-   "isSelf": false,
-   "homepage": null
-  },
-  {
-   "name": "fgilde.github.io",
-   "description": "Live showcase of every fgilde repo with a GitHub Pages site — https://fgilde.github.io/",
-   "language": "HTML",
-   "stars": 0,
-   "forks": 0,
-   "issues": 0,
-   "topics": [],
-   "pushed": "2026-09-02T03:41:35Z",
-   "hasPages": true,
-   "isFork": false,
-   "isSelf": true,
-   "homepage": null
   },
   {
    "name": "homebrew-tap",
@@ -103,7 +103,7 @@
    "name": "hausverwaltung",
    "description": "Complete property-management software for rental and HOA (WEG) administration. Multi-tenant, role-based, bilingual (DE/EN).",
    "language": "TypeScript",
-   "stars": 5,
+   "stars": 6,
    "forks": 1,
    "issues": 5,
    "topics": [],
@@ -179,7 +179,7 @@
    "name": "WebDataStudio",
    "description": "A database studio that runs in your browser: PostgreSQL, MySQL, SQL Server, SQLite, Oracle, DuckDB, ClickHouse, MongoDB and Redis in one container.",
    "language": "C#",
-   "stars": 2,
+   "stars": 3,
    "forks": 1,
    "issues": 1,
    "topics": [],

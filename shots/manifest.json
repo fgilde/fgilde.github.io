@@ -1,28 +1,11 @@
 {
- "generated": "2026-10-03T03:58:25.202Z",
+ "generated": "2026-10-04T05:12:10.689Z",
  "user": {
   "login": "fgilde",
   "publicRepos": 65,
   "followers": 33
  },
  "repos": [
-  {
-   "name": "hausverwaltung",
-   "description": "Complete property-management software for rental and HOA (WEG) administration. Multi-tenant, role-based, bilingual (DE/EN).",
-   "language": "TypeScript",
-   "stars": 10,
-   "forks": 4,
-   "issues": 5,
-   "topics": [],
-   "pushed": "2026-10-02T10:24:06Z",
-   "hasPages": true,
-   "isFork": false,
-   "isSelf": false,
-   "homepage": "https://havewa.app",
-   "url": "https://havewa.app",
-   "shot": "hausverwaltung.jpg",
-   "framable": true
-  },
   {
    "name": "fgilde",
    "description": "",
@@ -31,7 +14,7 @@
    "forks": 0,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-10-02T04:11:12Z",
+   "pushed": "2026-10-03T04:15:26Z",
    "hasPages": false,
    "isFork": false,
    "isSelf": false,
@@ -45,11 +28,28 @@
    "forks": 0,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-10-02T03:46:57Z",
+   "pushed": "2026-10-03T03:58:26Z",
    "hasPages": true,
    "isFork": false,
    "isSelf": true,
    "homepage": null
+  },
+  {
+   "name": "hausverwaltung",
+   "description": "Complete property-management software for rental and HOA (WEG) administration. Multi-tenant, role-based, bilingual (DE/EN).",
+   "language": "TypeScript",
+   "stars": 10,
+   "forks": 4,
+   "issues": 6,
+   "topics": [],
+   "pushed": "2026-10-02T10:24:06Z",
+   "hasPages": true,
+   "isFork": false,
+   "isSelf": false,
+   "homepage": "https://havewa.app",
+   "url": "https://havewa.app",
+   "shot": "hausverwaltung.jpg",
+   "framable": true
   },
   {
    "name": "Nextended",

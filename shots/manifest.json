@@ -1,11 +1,28 @@
 {
- "generated": "2026-10-04T05:12:10.689Z",
+ "generated": "2026-10-05T03:54:11.075Z",
  "user": {
   "login": "fgilde",
   "publicRepos": 65,
-  "followers": 33
+  "followers": 34
  },
  "repos": [
+  {
+   "name": "hausverwaltung",
+   "description": "Complete property-management software for rental and HOA (WEG) administration. Multi-tenant, role-based, bilingual (DE/EN).",
+   "language": "TypeScript",
+   "stars": 10,
+   "forks": 4,
+   "issues": 2,
+   "topics": [],
+   "pushed": "2026-10-04T19:09:30Z",
+   "hasPages": true,
+   "isFork": false,
+   "isSelf": false,
+   "homepage": "https://havewa.app",
+   "url": "https://havewa.app",
+   "shot": "hausverwaltung.jpg",
+   "framable": true
+  },
   {
    "name": "fgilde",
    "description": "",
@@ -14,7 +31,7 @@
    "forks": 0,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-10-03T04:15:26Z",
+   "pushed": "2026-10-04T05:28:48Z",
    "hasPages": false,
    "isFork": false,
    "isSelf": false,
@@ -28,28 +45,11 @@
    "forks": 0,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-10-03T03:58:26Z",
+   "pushed": "2026-10-04T05:12:11Z",
    "hasPages": true,
    "isFork": false,
    "isSelf": true,
    "homepage": null
-  },
-  {
-   "name": "hausverwaltung",
-   "description": "Complete property-management software for rental and HOA (WEG) administration. Multi-tenant, role-based, bilingual (DE/EN).",
-   "language": "TypeScript",
-   "stars": 10,
-   "forks": 4,
-   "issues": 6,
-   "topics": [],
-   "pushed": "2026-10-02T10:24:06Z",
-   "hasPages": true,
-   "isFork": false,
-   "isSelf": false,
-   "homepage": "https://havewa.app",
-   "url": "https://havewa.app",
-   "shot": "hausverwaltung.jpg",
-   "framable": true
   },
   {
    "name": "Nextended",
@@ -106,7 +106,7 @@
    "name": "Audiola",
    "description": "A modern cross-platform audio studio — arrange, separate, remix, master and master in 3D. A full audio-production studio for Windows, macOS, and Linux built on .NET 10 + Avalonia, with a companion .NET 10 Blazor WebAssembly web app. Drag a song in, split it into stems, edit on a multitrack timeline, swap or synthesize voices with local AI....",
    "language": "C#",
-   "stars": 7,
+   "stars": 8,
    "forks": 3,
    "issues": 0,
    "topics": [],
@@ -1481,7 +1481,7 @@
    "name": "@fgilde/embed-fonts",
    "version": "1.0.6",
    "description": "Injects content of font files into stylesheets by replacing the relative url() paths with base64 encoded data.",
-   "downloads": 1189,
+   "downloads": 1197,
    "icon": null,
    "url": "https://www.npmjs.com/package/@fgilde/embed-fonts",
    "repo": "git+https://github.com/fgilde/embed-fonts.git",
@@ -1496,7 +1496,7 @@
    "name": "@fgilde/remote-dependencies",
    "version": "1.0.6",
    "description": "Simple mapping for remote files to download them locally",
-   "downloads": 1142,
+   "downloads": 1152,
    "icon": null,
    "url": "https://www.npmjs.com/package/@fgilde/remote-dependencies",
    "repo": "git+https://github.com/fgilde/remote-dependencies.git",
@@ -1511,7 +1511,7 @@
    "name": "sabio-typescript-client",
    "version": "1.0.48",
    "description": "This is a Typescript client for SABIO Knowledge API",
-   "downloads": 972,
+   "downloads": 980,
    "icon": null,
    "url": "https://www.npmjs.com/package/sabio-typescript-client",
    "repo": null,
@@ -1523,10 +1523,24 @@
   },
   {
    "registry": "npm",
+   "name": "@fgilde/ngx-template",
+   "version": "1.1.1",
+   "description": "A strengthened angular template",
+   "downloads": 920,
+   "icon": null,
+   "url": "https://www.npmjs.com/package/@fgilde/ngx-template",
+   "repo": "git+https://github.com/fgilde/ngx-template.git",
+   "tags": [
+    "ngx",
+    "template"
+   ]
+  },
+  {
+   "registry": "npm",
    "name": "@fgilde/ngx-property-grid",
    "version": "9.0.6",
    "description": "A small and simple property grid in angular to view/edit POJOs, excellent if you have a \"settings\" object you want to give the user to edit.",
-   "downloads": 922,
+   "downloads": 914,
    "icon": null,
    "url": "https://www.npmjs.com/package/@fgilde/ngx-property-grid",
    "repo": "git+https://github.com/fgilde/ngx-property-grid.git",
@@ -1534,20 +1548,6 @@
     "angular",
     "property grid",
     "ngx"
-   ]
-  },
-  {
-   "registry": "npm",
-   "name": "@fgilde/ngx-template",
-   "version": "1.1.1",
-   "description": "A strengthened angular template",
-   "downloads": 911,
-   "icon": null,
-   "url": "https://www.npmjs.com/package/@fgilde/ngx-template",
-   "repo": "git+https://github.com/fgilde/ngx-template.git",
-   "tags": [
-    "ngx",
-    "template"
    ]
   },
   {
@@ -1570,7 +1570,7 @@
    "name": "mudex-webcomponents",
    "version": "9.11.0",
    "description": "MudBlazor.Extensions components as browser custom elements",
-   "downloads": 648,
+   "downloads": 649,
    "icon": null,
    "url": "https://www.npmjs.com/package/mudex-webcomponents",
    "repo": "git+https://github.com/fgilde/MudBlazor.Extensions.git",
@@ -1578,6 +1578,21 @@
     "mudblazor",
     "blazor",
     "web-components"
+   ]
+  },
+  {
+   "registry": "npm",
+   "name": "@fgilde/dockwipe",
+   "version": "1.0.9",
+   "description": "Can delete the whole world of docker images",
+   "downloads": 452,
+   "icon": null,
+   "url": "https://www.npmjs.com/package/@fgilde/dockwipe",
+   "repo": "git+https://github.com/fgilde/dockwipe.git",
+   "tags": [
+    "dockwipe",
+    "delete docker images",
+    "delete docker tags"
    ]
   },
   {
@@ -1593,21 +1608,6 @@
     "Blazor",
     "Playzor",
     "Playground"
-   ]
-  },
-  {
-   "registry": "npm",
-   "name": "@fgilde/dockwipe",
-   "version": "1.0.9",
-   "description": "Can delete the whole world of docker images",
-   "downloads": 446,
-   "icon": null,
-   "url": "https://www.npmjs.com/package/@fgilde/dockwipe",
-   "repo": "git+https://github.com/fgilde/dockwipe.git",
-   "tags": [
-    "dockwipe",
-    "delete docker images",
-    "delete docker tags"
    ]
   },
   {

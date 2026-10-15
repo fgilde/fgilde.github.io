@@ -1,11 +1,25 @@
 {
- "generated": "2026-10-14T03:45:29.668Z",
+ "generated": "2026-10-15T03:45:46.386Z",
  "user": {
   "login": "fgilde",
   "publicRepos": 69,
   "followers": 34
  },
  "repos": [
+  {
+   "name": "Coworkee",
+   "description": "",
+   "language": "C#",
+   "stars": 2,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-10-15T00:57:08Z",
+   "hasPages": false,
+   "isFork": false,
+   "isSelf": false,
+   "homepage": null
+  },
   {
    "name": "CoworkeeLib",
    "description": "Modular application framework for .NET 10: modules, dispatcher, EF Core audit and outbox, ASP.NET Core and Aspire integration",
@@ -14,7 +28,7 @@
    "forks": 0,
    "issues": 1,
    "topics": [],
-   "pushed": "2026-10-13T22:18:07Z",
+   "pushed": "2026-10-15T00:57:05Z",
    "hasPages": true,
    "isFork": false,
    "isSelf": false,
@@ -24,18 +38,55 @@
    "framable": true
   },
   {
-   "name": "Coworkee",
-   "description": "",
+   "name": "hausverwaltung",
+   "description": "Complete property-management software for rental and HOA (WEG) administration. Multi-tenant, role-based, bilingual (DE/EN).",
+   "language": "TypeScript",
+   "stars": 14,
+   "forks": 6,
+   "issues": 2,
+   "topics": [],
+   "pushed": "2026-10-14T11:01:50Z",
+   "hasPages": true,
+   "isFork": false,
+   "isSelf": false,
+   "homepage": "https://havewa.app",
+   "url": "https://havewa.app",
+   "shot": "hausverwaltung.jpg",
+   "framable": true
+  },
+  {
+   "name": "MudExRichTextEditor",
+   "description": "Quill based RichEditor component for MudBlazor",
    "language": "C#",
-   "stars": 2,
+   "stars": 138,
+   "forks": 28,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-10-14T08:34:38Z",
+   "hasPages": true,
+   "isFork": false,
+   "isSelf": false,
+   "homepage": "https://fgilde.github.io/MudExRichTextEditor/",
+   "url": "https://fgilde.github.io/MudExRichTextEditor/",
+   "shot": "MudExRichTextEditor.jpg",
+   "framable": true
+  },
+  {
+   "name": "AspireUI",
+   "description": "AspireUI is a visual canvas for .NET Aspire. Drag out resources and wire references, or edit real C# with Roslyn IntelliSense — both stay in sync. Run a stack and watch live per-resource status, publish to Docker Compose, Kubernetes, Bicep or an Aspire manifest, and even host apps like an app store, with 139+ ready-made containers.",
+   "language": "C#",
+   "stars": 5,
    "forks": 0,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-10-13T22:15:58Z",
-   "hasPages": false,
+   "pushed": "2026-10-14T08:32:40Z",
+   "hasPages": true,
    "isFork": false,
    "isSelf": false,
-   "homepage": null
+   "homepage": "https://fgilde.github.io/AspireUI/",
+   "url": "https://fgilde.github.io/AspireUI/",
+   "shot": "AspireUI.jpg",
+   "framable": true
   },
   {
    "name": "MudBlazor.Extensions",
@@ -45,7 +96,7 @@
    "forks": 31,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-10-13T21:37:56Z",
+   "pushed": "2026-10-14T08:28:39Z",
    "hasPages": true,
    "isFork": false,
    "isSelf": false,
@@ -62,7 +113,7 @@
    "forks": 0,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-10-13T04:15:36Z",
+   "pushed": "2026-10-14T04:11:15Z",
    "hasPages": false,
    "isFork": false,
    "isSelf": false,
@@ -76,28 +127,11 @@
    "forks": 0,
    "issues": 0,
    "topics": [],
-   "pushed": "2026-10-13T03:56:17Z",
+   "pushed": "2026-10-14T03:45:35Z",
    "hasPages": true,
    "isFork": false,
    "isSelf": true,
    "homepage": null
-  },
-  {
-   "name": "MudExRichTextEditor",
-   "description": "Quill based RichEditor component for MudBlazor",
-   "language": "C#",
-   "stars": 138,
-   "forks": 28,
-   "issues": 0,
-   "topics": [],
-   "pushed": "2026-10-12T23:02:45Z",
-   "hasPages": true,
-   "isFork": false,
-   "isSelf": false,
-   "homepage": "https://fgilde.github.io/MudExRichTextEditor/",
-   "url": "https://fgilde.github.io/MudExRichTextEditor/",
-   "shot": "MudExRichTextEditor.jpg",
-   "framable": true
   },
   {
    "name": "Nextended",
@@ -117,23 +151,6 @@
    "framable": true
   },
   {
-   "name": "AspireUI",
-   "description": "AspireUI is a visual canvas for .NET Aspire. Drag out resources and wire references, or edit real C# with Roslyn IntelliSense — both stay in sync. Run a stack and watch live per-resource status, publish to Docker Compose, Kubernetes, Bicep or an Aspire manifest, and even host apps like an app store, with 139+ ready-made containers.",
-   "language": "C#",
-   "stars": 5,
-   "forks": 0,
-   "issues": 0,
-   "topics": [],
-   "pushed": "2026-10-12T22:24:43Z",
-   "hasPages": true,
-   "isFork": false,
-   "isSelf": false,
-   "homepage": "https://fgilde.github.io/AspireUI/",
-   "url": "https://fgilde.github.io/AspireUI/",
-   "shot": "AspireUI.jpg",
-   "framable": true
-  },
-  {
    "name": "AI-Ming",
    "description": "PowerAim is a universal AI-based aim alignment tool. It captures the screen, runs a YOLOv8 ONNX model on the frame, and nudges the mouse towards the detected target — fully configurable, with a clean Fluent UI built on .NET 10 and WPF.",
    "language": "C#",
@@ -148,23 +165,6 @@
    "homepage": "http://poweraim.de/",
    "url": "https://poweraim.de/",
    "shot": "AI-Ming.jpg",
-   "framable": true
-  },
-  {
-   "name": "hausverwaltung",
-   "description": "Complete property-management software for rental and HOA (WEG) administration. Multi-tenant, role-based, bilingual (DE/EN).",
-   "language": "TypeScript",
-   "stars": 11,
-   "forks": 5,
-   "issues": 3,
-   "topics": [],
-   "pushed": "2026-10-11T19:57:51Z",
-   "hasPages": true,
-   "isFork": false,
-   "isSelf": false,
-   "homepage": "https://havewa.app",
-   "url": "https://havewa.app",
-   "shot": "hausverwaltung.jpg",
    "framable": true
   },
   {
@@ -1055,10 +1055,10 @@
   {
    "registry": "nuget",
    "name": "MudBlazor.Extensions",
-   "version": "9.11.2",
+   "version": "9.11.3",
    "description": "MudBlazor.Extensions is a small extension library for MudBlazor from https://mudblazor.com/",
    "downloads": 806008,
-   "icon": "https://api.nuget.org/v3-flatcontainer/mudblazor.extensions/9.11.2/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/mudblazor.extensions/9.11.3/icon",
    "url": "https://www.nuget.org/packages/MudBlazor.Extensions",
    "repo": null,
    "tags": [
@@ -1125,10 +1125,10 @@
   {
    "registry": "nuget",
    "name": "MudExRichTextEditor",
-   "version": "9.5.3",
+   "version": "9.5.4",
    "description": "MudExRichTextEditor is a custom reusable control that allows us to easily consume Quill combining in a MudBlazor project.",
    "downloads": 212812,
-   "icon": "https://api.nuget.org/v3-flatcontainer/mudexrichtexteditor/9.5.3/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/mudexrichtexteditor/9.5.4/icon",
    "url": "https://www.nuget.org/packages/MudExRichTextEditor",
    "repo": "https://github.com/fgilde/MudExRichTextEditor",
    "tags": [
@@ -1571,7 +1571,7 @@
   {
    "registry": "npm",
    "name": "mudex-webcomponents",
-   "version": "9.11.2",
+   "version": "9.11.3",
    "description": "MudBlazor.Extensions components as browser custom elements",
    "downloads": 1055,
    "icon": null,
@@ -1750,10 +1750,10 @@
   {
    "registry": "nuget",
    "name": "Coworkee.Core",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Module system with [DependsOn], Result and Error, current user and ambient user scope.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.core/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.core/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Core",
    "repo": null,
    "tags": [
@@ -1764,56 +1764,11 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Domain",
-   "version": "0.0.1.21",
-   "description": "Entity and AggregateRoot with domain events, markers for audit, soft delete, tenants and concurrency.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.domain/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Domain",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.OData",
-   "version": "0.0.1.21",
-   "description": "OData set per entity with facets, row filters and hidden properties.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.odata/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.OData",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.Contracts",
-   "version": "0.0.1.21",
-   "description": "DTOs, permission names and paging records shared by server and clients.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.contracts/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Contracts",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
    "name": "Coworkee.AspNetCore",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "AddCoworkee<TRoot>() for ASP.NET Core hosts: problem details, API groups, bearer authentication, OpenAPI and Swagger UI.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.aspnetcore/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.aspnetcore/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.AspNetCore",
    "repo": null,
    "tags": [
@@ -1824,11 +1779,41 @@
   },
   {
    "registry": "nuget",
+   "name": "Coworkee.Contracts",
+   "version": "0.0.1.23",
+   "description": "DTOs, permission names and paging records shared by server and clients.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.contracts/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Contracts",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Domain",
+   "version": "0.0.1.23",
+   "description": "Entity and AggregateRoot with domain events, markers for audit, soft delete, tenants and concurrency.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.domain/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Domain",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
    "name": "Coworkee.Application",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Dispatcher for commands and queries with logging, validation, permission, caching and unit of work middleware.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.application/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.application/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Application",
    "repo": null,
    "tags": [
@@ -1839,12 +1824,12 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Identity",
-   "version": "0.0.1.21",
-   "description": "Users, roles, groups, tenants and permission grants with resource level checks.",
+   "name": "Coworkee.OData",
+   "version": "0.0.1.23",
+   "description": "OData set per entity with facets, row filters and hidden properties.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.identity/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Identity",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.odata/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.OData",
    "repo": null,
    "tags": [
     "coworkee",
@@ -1855,10 +1840,10 @@
   {
    "registry": "nuget",
    "name": "Coworkee.Infrastructure",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "CoworkeeDbContext on Postgres, SQL Server or SQLite with tenants, soft delete, field level audit trail and transactional outbox.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.infrastructure/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.infrastructure/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Infrastructure",
    "repo": null,
    "tags": [
@@ -1869,12 +1854,27 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Client",
-   "version": "0.0.1.21",
-   "description": "Base for typed .NET clients (SDKs) of Coworkee APIs: JSON calls and problem details as exceptions.",
+   "name": "Coworkee.Identity",
+   "version": "0.0.1.23",
+   "description": "Users, roles, groups, tenants and permission grants with resource level checks.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.client/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Client",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.identity/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Identity",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Settings",
+   "version": "0.0.1.23",
+   "description": "Typed settings per global, tenant and user scope with encrypted secrets.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.settings/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Settings",
    "repo": null,
    "tags": [
     "coworkee",
@@ -1885,10 +1885,10 @@
   {
    "registry": "nuget",
    "name": "Coworkee.Realtime",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "SignalR push for entity changes, notifications and app events.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.realtime/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.realtime/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Realtime",
    "repo": null,
    "tags": [
@@ -1899,11 +1899,101 @@
   },
   {
    "registry": "nuget",
+   "name": "Coworkee.Storage",
+   "version": "0.0.1.23",
+   "description": "Blob storage on the file system, S3 or Azure.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.storage/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Storage",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Mailing",
+   "version": "0.0.1.23",
+   "description": "Scriban mail templates with overrides and queued SMTP delivery.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.mailing/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Mailing",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.BackgroundJobs",
+   "version": "0.0.1.23",
+   "description": "Hangfire jobs with queues, retries and delayed follow-ups.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.backgroundjobs/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.BackgroundJobs",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Notifications",
+   "version": "0.0.1.23",
+   "description": "In app notifications with digests.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.notifications/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Notifications",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Client",
+   "version": "0.0.1.23",
+   "description": "Base for typed .NET clients (SDKs) of Coworkee APIs: JSON calls and problem details as exceptions.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.client/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Client",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Account",
+   "version": "0.0.1.23",
+   "description": "Account pages and self service for the Coworkee auth server.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.account/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Account",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
    "name": "Coworkee.Testing",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Database fixture (Postgres or SQL Server container, SQLite file), test users and a web application factory for Coworkee apps.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.testing/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.testing/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Testing",
    "repo": null,
    "tags": [
@@ -1915,10 +2005,10 @@
   {
    "registry": "nuget",
    "name": "Coworkee.Search",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Search index abstraction for Coworkee entities.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.search/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.search/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Search",
    "repo": null,
    "tags": [
@@ -1929,176 +2019,11 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.BackgroundJobs",
-   "version": "0.0.1.21",
-   "description": "Hangfire jobs with queues, retries and delayed follow-ups.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.backgroundjobs/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.BackgroundJobs",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.Settings",
-   "version": "0.0.1.21",
-   "description": "Typed settings per global, tenant and user scope with encrypted secrets.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.settings/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Settings",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.Files",
-   "version": "0.0.1.21",
-   "description": "Folders and files with preview, download, upload and per-folder permissions, kept in the blob storage.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.files/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Files",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.Notifications",
-   "version": "0.0.1.21",
-   "description": "In app notifications with digests.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.notifications/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Notifications",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.Localization",
-   "version": "0.0.1.21",
-   "description": "Languages and translations stored in the database, machine translation and live updates.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.localization/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Localization",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.Mailing",
-   "version": "0.0.1.21",
-   "description": "Scriban mail templates with overrides and queued SMTP delivery.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.mailing/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Mailing",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.Storage",
-   "version": "0.0.1.21",
-   "description": "Blob storage on the file system, S3 or Azure.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.storage/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Storage",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.EventBus.RabbitMq",
-   "version": "0.0.1.21",
-   "description": "RabbitMQ transport for Coworkee.EventBus with publisher confirms, quorum queues and dead lettering.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.eventbus.rabbitmq/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.EventBus.RabbitMq",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.Theming",
-   "version": "0.0.1.21",
-   "description": "Themes with palettes, fonts, layout and app options per tenant, editable at runtime.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.theming/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Theming",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.Studio",
-   "version": "0.0.1.21",
-   "description": "Coworkee Studio, the desktop wizard for Windows, macOS and Linux: name, branding, sign-in, modules, infrastructure and entities of a new app, created with the coworkee CLI. Start it with coworkee ui.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.studio/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Studio",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.EventBus",
-   "version": "0.0.1.21",
-   "description": "Integration events between apps and services through the transactional outbox, with an inbox for idempotent handlers. Works without a broker.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.eventbus/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.EventBus",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
    "name": "Coworkee.Cli",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Coworkee command line: create a Coworkee application from switches or a JSON spec with modules, branding and entities, run it, add migrations, modules and entities, update the packages; MCP server for AI agents and launcher of Coworkee Studio.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.cli/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.cli/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Cli",
    "repo": null,
    "tags": [
@@ -2110,10 +2035,10 @@
   {
    "registry": "nuget",
    "name": "Coworkee.Features",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Feature management with editions and per tenant overrides, tenant administration, [RequiresFeature] and feature gates for Blazor.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.features/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.features/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Features",
    "repo": null,
    "tags": [
@@ -2124,12 +2049,132 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Account",
-   "version": "0.0.1.21",
-   "description": "Account pages and self service for the Coworkee auth server.",
+   "name": "Coworkee.Theming",
+   "version": "0.0.1.23",
+   "description": "Themes with palettes, fonts, layout and app options per tenant, editable at runtime.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.account/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Account",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.theming/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Theming",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.ResponseFilters",
+   "version": "0.0.1.23",
+   "description": "Permission dependent response filters on Nextended.ResponseFilters.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.responsefilters/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.ResponseFilters",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Files",
+   "version": "0.0.1.23",
+   "description": "Folders and files with preview, download, upload and per-folder permissions, kept in the blob storage.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.files/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Files",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Localization",
+   "version": "0.0.1.23",
+   "description": "Languages and translations stored in the database, machine translation and live updates.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.localization/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Localization",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.EventBus.RabbitMq",
+   "version": "0.0.1.23",
+   "description": "RabbitMQ transport for Coworkee.EventBus with publisher confirms, quorum queues and dead lettering.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.eventbus.rabbitmq/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.EventBus.RabbitMq",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Client.Blazor",
+   "version": "0.0.1.23",
+   "description": "MudBlazor shell for Blazor WebAssembly: navigation, data tables, account and admin pages, theming.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.client.blazor/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Client.Blazor",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Studio",
+   "version": "0.0.1.23",
+   "description": "Coworkee Studio, the desktop wizard for Windows, macOS and Linux: name, branding, sign-in, modules, infrastructure and entities of a new app, created with the coworkee CLI. Start it with coworkee ui.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.studio/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Studio",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.EventBus",
+   "version": "0.0.1.23",
+   "description": "Integration events between apps and services through the transactional outbox, with an inbox for idempotent handlers. Works without a broker.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.eventbus/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.EventBus",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Client.Blazor.ClientEntities",
+   "version": "0.0.1.23",
+   "description": "Client entities for Blazor WebAssembly: mirror OData sets in the browser and filter, search, sort and facet them locally.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.client.blazor.cliententities/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Client.Blazor.ClientEntities",
    "repo": null,
    "tags": [
     "coworkee",
@@ -2140,10 +2185,10 @@
   {
    "registry": "nuget",
    "name": "Coworkee.ExtendedAttributes",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Extra attributes for any entity without schema changes.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.extendedattributes/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.extendedattributes/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.ExtendedAttributes",
    "repo": null,
    "tags": [
@@ -2154,11 +2199,26 @@
   },
   {
    "registry": "nuget",
+   "name": "Coworkee.Social",
+   "version": "0.0.1.23",
+   "description": "Comments, tags and ratings for any entity, with realtime updates and notifications.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.social/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Social",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
    "name": "Coworkee.AuthServer",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "OpenIddict auth server with login, registration, two factor and external sign-in.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.authserver/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.authserver/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.AuthServer",
    "repo": null,
    "tags": [
@@ -2170,10 +2230,10 @@
   {
    "registry": "nuget",
    "name": "Coworkee.Ai",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "AI assistant over the tools of all modules, MCP server and tool call audit.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.ai/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.ai/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Ai",
    "repo": null,
    "tags": [
@@ -2185,10 +2245,10 @@
   {
    "registry": "nuget",
    "name": "Coworkee.Auditing",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Audit trail queries, entity history and restore.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.auditing/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.auditing/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Auditing",
    "repo": null,
    "tags": [
@@ -2199,12 +2259,12 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Client.Blazor",
-   "version": "0.0.1.21",
-   "description": "MudBlazor shell for Blazor WebAssembly: navigation, data tables, account and admin pages, theming.",
+   "name": "Coworkee.CodeGen",
+   "version": "0.0.1.23",
+   "description": "Optional DTO and mapping generation for entities with Nextended.CodeGen, mapped by extension methods or Mapperly.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.client.blazor/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Client.Blazor",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.codegen/0.0.1.23/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.CodeGen",
    "repo": null,
    "tags": [
     "coworkee",
@@ -2215,10 +2275,10 @@
   {
    "registry": "nuget",
    "name": "Coworkee.Chat",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Direct and group chat with realtime delivery.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.chat/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.chat/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Chat",
    "repo": null,
    "tags": [
@@ -2229,26 +2289,11 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Social",
-   "version": "0.0.1.21",
-   "description": "Comments, tags and ratings for any entity, with realtime updates and notifications.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.social/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Social",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
    "name": "Coworkee.Search.Elasticsearch",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Elasticsearch provider for Coworkee.Search.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.search.elasticsearch/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.search.elasticsearch/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Search.Elasticsearch",
    "repo": null,
    "tags": [
@@ -2259,26 +2304,11 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.ResponseFilters",
-   "version": "0.0.1.21",
-   "description": "Permission dependent response filters on Nextended.ResponseFilters.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.responsefilters/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.ResponseFilters",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
    "name": "Coworkee.Bff",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Backend for frontend for Blazor WebAssembly: cookie session, token handling and API forwarding.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.bff/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.bff/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Bff",
    "repo": null,
    "tags": [
@@ -2290,10 +2320,10 @@
   {
    "registry": "nuget",
    "name": "Coworkee.Templates",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "dotnet new template for Coworkee applications (coworkee): Aspire app host, API, auth server, Blazor WebAssembly with BFF and Postgres.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.templates/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.templates/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Templates",
    "repo": null,
    "tags": [
@@ -2305,10 +2335,10 @@
   {
    "registry": "nuget",
    "name": "Coworkee.Backup",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Database backups and restore from the admin pages.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.backup/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.backup/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Backup",
    "repo": null,
    "tags": [
@@ -2319,41 +2349,11 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Client.Blazor.ClientEntities",
-   "version": "0.0.1.21",
-   "description": "Client entities for Blazor WebAssembly: mirror OData sets in the browser and filter, search, sort and facet them locally.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.client.blazor.cliententities/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Client.Blazor.ClientEntities",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
-   "name": "Coworkee.CodeGen",
-   "version": "0.0.1.21",
-   "description": "Optional DTO and mapping generation for entities with Nextended.CodeGen, mapped by extension methods or Mapperly.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.codegen/0.0.1.21/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.CodeGen",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
    "name": "Coworkee.Reporting",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Reports and dashboards over OData entity sets: server side aggregation, sharing with roles, favorites and live updates.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.reporting/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.reporting/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Reporting",
    "repo": null,
    "tags": [
@@ -2365,16 +2365,46 @@
   {
    "registry": "nuget",
    "name": "Coworkee.Client.Blazor.Reporting",
-   "version": "0.0.1.21",
+   "version": "0.0.1.23",
    "description": "Report designer for Blazor WebAssembly: GridStack layout, ApexCharts, KPI, tables, pivot, filters, cross filters, drill-down and export.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.client.blazor.reporting/0.0.1.21/icon",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.client.blazor.reporting/0.0.1.23/icon",
    "url": "https://www.nuget.org/packages/Coworkee.Client.Blazor.Reporting",
    "repo": null,
    "tags": [
     "coworkee",
     "framework",
     "modular"
+   ]
+  },
+  {
+   "registry": "npm",
+   "name": "@coworkee/airworks",
+   "version": "0.0.1023",
+   "description": "AirWorks web desktop for Coworkee apps: sign-in through the app's BFF, theme, texts, realtime and apps for settings, files, data, chat, reports, the assistant and the administration",
+   "downloads": 0,
+   "icon": null,
+   "url": "https://www.npmjs.com/package/@coworkee/airworks",
+   "repo": "git+https://github.com/fgilde/CoworkeeLib.git",
+   "tags": [
+    "coworkee",
+    "airworks",
+    "web-desktop"
+   ]
+  },
+  {
+   "registry": "npm",
+   "name": "@coworkee/client",
+   "version": "0.0.1023",
+   "description": "Typed client for the API of Coworkee apps: OpenAPI types, BFF session, theme, texts and OData helpers",
+   "downloads": 0,
+   "icon": null,
+   "url": "https://www.npmjs.com/package/@coworkee/client",
+   "repo": "git+https://github.com/fgilde/CoworkeeLib.git",
+   "tags": [
+    "coworkee",
+    "openapi",
+    "client"
    ]
   }
  ]

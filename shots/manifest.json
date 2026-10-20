@@ -1,11 +1,73 @@
 {
- "generated": "2026-10-19T03:48:56.285Z",
+ "generated": "2026-10-20T03:46:19.450Z",
  "user": {
   "login": "fgilde",
   "publicRepos": 69,
   "followers": 34
  },
  "repos": [
+  {
+   "name": "CoworkeeLib",
+   "description": "Modular application framework for .NET 10: modules, dispatcher, EF Core audit and outbox, ASP.NET Core and Aspire integration",
+   "language": "C#",
+   "stars": 2,
+   "forks": 0,
+   "issues": 1,
+   "topics": [],
+   "pushed": "2026-10-19T19:51:02Z",
+   "hasPages": true,
+   "isFork": false,
+   "isSelf": false,
+   "homepage": "https://fgilde.github.io/CoworkeeLib/",
+   "url": "https://fgilde.github.io/CoworkeeLib/",
+   "shot": "CoworkeeLib.jpg",
+   "framable": true
+  },
+  {
+   "name": "hausverwaltung",
+   "description": "Complete property-management software for rental and HOA (WEG) administration. Multi-tenant, role-based, bilingual (DE/EN).",
+   "language": "TypeScript",
+   "stars": 15,
+   "forks": 7,
+   "issues": 1,
+   "topics": [],
+   "pushed": "2026-10-19T19:41:04Z",
+   "hasPages": true,
+   "isFork": false,
+   "isSelf": false,
+   "homepage": "https://havewa.app",
+   "url": "https://havewa.app",
+   "shot": "hausverwaltung.jpg",
+   "framable": true
+  },
+  {
+   "name": "fgilde",
+   "description": "",
+   "language": "",
+   "stars": 5,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-10-19T04:11:15Z",
+   "hasPages": false,
+   "isFork": false,
+   "isSelf": false,
+   "homepage": null
+  },
+  {
+   "name": "fgilde.github.io",
+   "description": "Live showcase of every fgilde repo with a GitHub Pages site — https://fgilde.github.io/",
+   "language": "HTML",
+   "stars": 0,
+   "forks": 0,
+   "issues": 0,
+   "topics": [],
+   "pushed": "2026-10-19T03:48:57Z",
+   "hasPages": true,
+   "isFork": false,
+   "isSelf": true,
+   "homepage": null
+  },
   {
    "name": "AI-Ming",
    "description": "PowerAim is a universal AI-based aim alignment tool. It captures the screen, runs a YOLOv8 ONNX model on the frame, and nudges the mouse towards the detected target — fully configurable, with a clean Fluent UI built on .NET 10 and WPF.",
@@ -24,23 +86,6 @@
    "framable": true
   },
   {
-   "name": "CoworkeeLib",
-   "description": "Modular application framework for .NET 10: modules, dispatcher, EF Core audit and outbox, ASP.NET Core and Aspire integration",
-   "language": "C#",
-   "stars": 2,
-   "forks": 0,
-   "issues": 1,
-   "topics": [],
-   "pushed": "2026-10-18T17:35:06Z",
-   "hasPages": true,
-   "isFork": false,
-   "isSelf": false,
-   "homepage": "https://fgilde.github.io/CoworkeeLib/",
-   "url": "https://fgilde.github.io/CoworkeeLib/",
-   "shot": "CoworkeeLib.jpg",
-   "framable": true
-  },
-  {
    "name": "Coworkee",
    "description": "",
    "language": "C#",
@@ -55,39 +100,11 @@
    "homepage": null
   },
   {
-   "name": "fgilde",
-   "description": "",
-   "language": "",
-   "stars": 5,
-   "forks": 0,
-   "issues": 0,
-   "topics": [],
-   "pushed": "2026-10-18T04:10:07Z",
-   "hasPages": false,
-   "isFork": false,
-   "isSelf": false,
-   "homepage": null
-  },
-  {
-   "name": "fgilde.github.io",
-   "description": "Live showcase of every fgilde repo with a GitHub Pages site — https://fgilde.github.io/",
-   "language": "HTML",
-   "stars": 0,
-   "forks": 0,
-   "issues": 0,
-   "topics": [],
-   "pushed": "2026-10-18T03:44:46Z",
-   "hasPages": true,
-   "isFork": false,
-   "isSelf": true,
-   "homepage": null
-  },
-  {
    "name": "MudBlazor.Extensions",
    "description": "MudBlazor.Extensions from https://www.mudex.org is a small extension for MudBlazor from https://mudblazor.com",
    "language": "C#",
    "stars": 329,
-   "forks": 31,
+   "forks": 30,
    "issues": 0,
    "topics": [],
    "pushed": "2026-10-17T16:15:58Z",
@@ -114,23 +131,6 @@
    "homepage": "https://fgilde.github.io/AirWorks/",
    "url": "https://fgilde.github.io/AirWorks/",
    "shot": "AirWorks.jpg",
-   "framable": true
-  },
-  {
-   "name": "hausverwaltung",
-   "description": "Complete property-management software for rental and HOA (WEG) administration. Multi-tenant, role-based, bilingual (DE/EN).",
-   "language": "TypeScript",
-   "stars": 15,
-   "forks": 7,
-   "issues": 2,
-   "topics": [],
-   "pushed": "2026-10-16T14:55:09Z",
-   "hasPages": true,
-   "isFork": false,
-   "isSelf": false,
-   "homepage": "https://havewa.app",
-   "url": "https://havewa.app",
-   "shot": "hausverwaltung.jpg",
    "framable": true
   },
   {
@@ -311,7 +311,7 @@
    "language": "C#",
    "stars": 6,
    "forks": 1,
-   "issues": 3,
+   "issues": 7,
    "topics": [],
    "pushed": "2026-09-28T21:39:08Z",
    "hasPages": true,
@@ -1509,6 +1509,36 @@
    "tags": []
   },
   {
+   "registry": "npm",
+   "name": "@coworkee/client",
+   "version": "0.0.1034",
+   "description": "Typed client for the API of Coworkee apps: OpenAPI types, BFF session, theme, texts and OData helpers",
+   "downloads": 1519,
+   "icon": null,
+   "url": "https://www.npmjs.com/package/@coworkee/client",
+   "repo": "git+https://github.com/fgilde/CoworkeeLib.git",
+   "tags": [
+    "coworkee",
+    "openapi",
+    "client"
+   ]
+  },
+  {
+   "registry": "npm",
+   "name": "@coworkee/airworks",
+   "version": "0.0.1034",
+   "description": "AirWorks web desktop for Coworkee apps: sign-in through the app's BFF, theme, texts, realtime and apps for settings, files, data, chat, reports, the assistant and the administration",
+   "downloads": 1477,
+   "icon": null,
+   "url": "https://www.npmjs.com/package/@coworkee/airworks",
+   "repo": "git+https://github.com/fgilde/CoworkeeLib.git",
+   "tags": [
+    "coworkee",
+    "airworks",
+    "web-desktop"
+   ]
+  },
+  {
    "registry": "nuget",
    "name": "Nextended.Aspire.Hosting.Php",
    "version": "10.1.46",
@@ -1540,25 +1570,10 @@
   },
   {
    "registry": "npm",
-   "name": "@fgilde/embed-fonts",
-   "version": "1.0.6",
-   "description": "Injects content of font files into stylesheets by replacing the relative url() paths with base64 encoded data.",
-   "downloads": 1226,
-   "icon": null,
-   "url": "https://www.npmjs.com/package/@fgilde/embed-fonts",
-   "repo": "git+https://github.com/fgilde/embed-fonts.git",
-   "tags": [
-    "embed-fonts",
-    "dependencies",
-    "external"
-   ]
-  },
-  {
-   "registry": "npm",
    "name": "mudex-webcomponents",
    "version": "9.11.4",
    "description": "MudBlazor.Extensions components as browser custom elements",
-   "downloads": 1219,
+   "downloads": 1263,
    "icon": null,
    "url": "https://www.npmjs.com/package/mudex-webcomponents",
    "repo": "git+https://github.com/fgilde/MudBlazor.Extensions.git",
@@ -1570,10 +1585,25 @@
   },
   {
    "registry": "npm",
+   "name": "@fgilde/embed-fonts",
+   "version": "1.0.6",
+   "description": "Injects content of font files into stylesheets by replacing the relative url() paths with base64 encoded data.",
+   "downloads": 1202,
+   "icon": null,
+   "url": "https://www.npmjs.com/package/@fgilde/embed-fonts",
+   "repo": "git+https://github.com/fgilde/embed-fonts.git",
+   "tags": [
+    "embed-fonts",
+    "dependencies",
+    "external"
+   ]
+  },
+  {
+   "registry": "npm",
    "name": "@fgilde/remote-dependencies",
    "version": "1.0.6",
    "description": "Simple mapping for remote files to download them locally",
-   "downloads": 1181,
+   "downloads": 1164,
    "icon": null,
    "url": "https://www.npmjs.com/package/@fgilde/remote-dependencies",
    "repo": "git+https://github.com/fgilde/remote-dependencies.git",
@@ -1588,7 +1618,7 @@
    "name": "@fgilde/ngx-property-grid",
    "version": "9.0.6",
    "description": "A small and simple property grid in angular to view/edit POJOs, excellent if you have a \"settings\" object you want to give the user to edit.",
-   "downloads": 959,
+   "downloads": 951,
    "icon": null,
    "url": "https://www.npmjs.com/package/@fgilde/ngx-property-grid",
    "repo": "git+https://github.com/fgilde/ngx-property-grid.git",
@@ -1603,7 +1633,7 @@
    "name": "@fgilde/ngx-template",
    "version": "1.1.1",
    "description": "A strengthened angular template",
-   "downloads": 952,
+   "downloads": 946,
    "icon": null,
    "url": "https://www.npmjs.com/package/@fgilde/ngx-template",
    "repo": "git+https://github.com/fgilde/ngx-template.git",
@@ -1617,7 +1647,7 @@
    "name": "sabio-typescript-client",
    "version": "1.0.48",
    "description": "This is a Typescript client for SABIO Knowledge API",
-   "downloads": 939,
+   "downloads": 940,
    "icon": null,
    "url": "https://www.npmjs.com/package/sabio-typescript-client",
    "repo": null,
@@ -1640,51 +1670,6 @@
     "aspire",
     "supabase",
     "lovable"
-   ]
-  },
-  {
-   "registry": "npm",
-   "name": "@coworkee/client",
-   "version": "0.0.1034",
-   "description": "Typed client for the API of Coworkee apps: OpenAPI types, BFF session, theme, texts and OData helpers",
-   "downloads": 778,
-   "icon": null,
-   "url": "https://www.npmjs.com/package/@coworkee/client",
-   "repo": "git+https://github.com/fgilde/CoworkeeLib.git",
-   "tags": [
-    "coworkee",
-    "openapi",
-    "client"
-   ]
-  },
-  {
-   "registry": "npm",
-   "name": "@coworkee/airworks",
-   "version": "0.0.1034",
-   "description": "AirWorks web desktop for Coworkee apps: sign-in through the app's BFF, theme, texts, realtime and apps for settings, files, data, chat, reports, the assistant and the administration",
-   "downloads": 757,
-   "icon": null,
-   "url": "https://www.npmjs.com/package/@coworkee/airworks",
-   "repo": "git+https://github.com/fgilde/CoworkeeLib.git",
-   "tags": [
-    "coworkee",
-    "airworks",
-    "web-desktop"
-   ]
-  },
-  {
-   "registry": "npm",
-   "name": "@fgilde/dockwipe",
-   "version": "1.0.9",
-   "description": "Can delete the whole world of docker images",
-   "downloads": 465,
-   "icon": null,
-   "url": "https://www.npmjs.com/package/@fgilde/dockwipe",
-   "repo": "git+https://github.com/fgilde/dockwipe.git",
-   "tags": [
-    "dockwipe",
-    "delete docker images",
-    "delete docker tags"
    ]
   },
   {
@@ -1760,6 +1745,21 @@
     "Blazor",
     "Playzor",
     "Playground"
+   ]
+  },
+  {
+   "registry": "npm",
+   "name": "@fgilde/dockwipe",
+   "version": "1.0.9",
+   "description": "Can delete the whole world of docker images",
+   "downloads": 354,
+   "icon": null,
+   "url": "https://www.npmjs.com/package/@fgilde/dockwipe",
+   "repo": "git+https://github.com/fgilde/dockwipe.git",
+   "tags": [
+    "dockwipe",
+    "delete docker images",
+    "delete docker tags"
    ]
   },
   {
@@ -1914,12 +1914,12 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Identity",
+   "name": "Coworkee.Settings",
    "version": "0.0.1.34",
-   "description": "Users, roles, groups, tenants and permission grants with resource level checks.",
+   "description": "Typed settings per global, tenant and user scope with encrypted secrets.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.identity/0.0.1.34/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Identity",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.settings/0.0.1.34/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Settings",
    "repo": null,
    "tags": [
     "coworkee",
@@ -1929,12 +1929,12 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Settings",
+   "name": "Coworkee.Identity",
    "version": "0.0.1.34",
-   "description": "Typed settings per global, tenant and user scope with encrypted secrets.",
+   "description": "Users, roles, groups, tenants and permission grants with resource level checks.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.settings/0.0.1.34/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Settings",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.identity/0.0.1.34/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Identity",
    "repo": null,
    "tags": [
     "coworkee",
@@ -1989,12 +1989,12 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.EventBus",
+   "name": "Coworkee.Notifications",
    "version": "0.0.1.34",
-   "description": "Integration events between apps and services through the transactional outbox, with an inbox for idempotent handlers. Works without a broker.",
+   "description": "In app notifications with digests.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.eventbus/0.0.1.34/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.EventBus",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.notifications/0.0.1.34/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Notifications",
    "repo": null,
    "tags": [
     "coworkee",
@@ -2004,12 +2004,12 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Notifications",
+   "name": "Coworkee.EventBus",
    "version": "0.0.1.34",
-   "description": "In app notifications with digests.",
+   "description": "Integration events between apps and services through the transactional outbox, with an inbox for idempotent handlers. Works without a broker.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.notifications/0.0.1.34/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Notifications",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.eventbus/0.0.1.34/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.EventBus",
    "repo": null,
    "tags": [
     "coworkee",
@@ -2139,21 +2139,6 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Chat",
-   "version": "0.0.1.34",
-   "description": "Direct and group chat with realtime delivery.",
-   "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.chat/0.0.1.34/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Chat",
-   "repo": null,
-   "tags": [
-    "coworkee",
-    "framework",
-    "modular"
-   ]
-  },
-  {
-   "registry": "nuget",
    "name": "Coworkee.Search",
    "version": "0.0.1.34",
    "description": "Search index abstraction for Coworkee entities.",
@@ -2169,12 +2154,12 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Bff",
+   "name": "Coworkee.Chat",
    "version": "0.0.1.34",
-   "description": "Backend for frontend for Blazor WebAssembly: cookie session, token handling and API forwarding.",
+   "description": "Direct and group chat with realtime delivery.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.bff/0.0.1.34/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Bff",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.chat/0.0.1.34/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Chat",
    "repo": null,
    "tags": [
     "coworkee",
@@ -2184,12 +2169,12 @@
   },
   {
    "registry": "nuget",
-   "name": "Coworkee.Backup",
+   "name": "Coworkee.Bff",
    "version": "0.0.1.34",
-   "description": "Database backups and restore from the admin pages.",
+   "description": "Backend for frontend for Blazor WebAssembly: cookie session, token handling and API forwarding.",
    "downloads": 0,
-   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.backup/0.0.1.34/icon",
-   "url": "https://www.nuget.org/packages/Coworkee.Backup",
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.bff/0.0.1.34/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Bff",
    "repo": null,
    "tags": [
     "coworkee",
@@ -2220,6 +2205,21 @@
    "downloads": 0,
    "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.responsefilters/0.0.1.34/icon",
    "url": "https://www.nuget.org/packages/Coworkee.ResponseFilters",
+   "repo": null,
+   "tags": [
+    "coworkee",
+    "framework",
+    "modular"
+   ]
+  },
+  {
+   "registry": "nuget",
+   "name": "Coworkee.Backup",
+   "version": "0.0.1.34",
+   "description": "Database backups and restore from the admin pages.",
+   "downloads": 0,
+   "icon": "https://api.nuget.org/v3-flatcontainer/coworkee.backup/0.0.1.34/icon",
+   "url": "https://www.nuget.org/packages/Coworkee.Backup",
    "repo": null,
    "tags": [
     "coworkee",
